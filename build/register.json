@@ -2,7 +2,7 @@
   "name": "OpenAPI 3.0 Security",
   "abstract": "Standard schemas for defining\n[OpenAPI 3.0 security requirements](https://swagger.io/specification/v3/#security-requirement-object) in OGC APIs. \n",
   "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
-  "modified": "2026-03-05T09:55:04.750293",
+  "modified": "2026-03-05T10:04:15.914656",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"701faf76bc0f3f50a0bc65888e0d7433c50d30c2",
