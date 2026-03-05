@@ -1,0 +1,117 @@
+{
+  "name": "OpenAPI 3.0 Security",
+  "abstract": "Standard schemas for defining\n[OpenAPI 3.0 security requirements](https://swagger.io/specification/v3/#security-requirement-object) in OGC APIs. \n",
+  "sparqlEndpoint": "https://defs-dev.opengis.net/fuseki/query",
+  "modified": "2026-03-05T09:55:04.750293",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"701faf76bc0f3f50a0bc65888e0d7433c50d30c2",
+      "shortCommitId": "\"701faf",
+      "date": "2026-03-03T10:23:06+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/ogcincubator/bblocks-oas30-security",
+  "gitHubRepository": "https://github.com/ogcincubator/bblocks-oas30-security/blob/master/",
+  "baseURL": "https://ogcincubator.github.io/bblocks-oas30-security/",
+  "viewerURL": "https://ogcincubator.github.io/bblocks-oas30-security/",
+  "validationReport": "https://ogcincubator.github.io/bblocks-oas30-security/build/tests/report.html",
+  "validationReportJson": "https://ogcincubator.github.io/bblocks-oas30-security/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.oas30.security.security-object",
+      "name": "Security Object Schema",
+      "abstract": "Schema for OpenAPI 3.0 security objects in OGC APIs",
+      "status": "under-development",
+      "dateTimeAddition": "2026-03-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-register",
+      "version": "0.1",
+      "dateOfLastChange": "2026-03-05",
+      "link": "https://github.com/opengeospatial/bblock-template",
+      "sources": [
+        {
+          "title": "OpenAPI 3.0 Security Requirement Object",
+          "link": "https://swagger.io/specification/v3/#security-requirement-object"
+        },
+        {
+          "title": "OpenAPI 3.0 Security Scheme Object",
+          "link": "https://swagger.io/specification/v3/#security-scheme-object"
+        }
+      ],
+      "conformanceClasses": [
+        "http://www.opengis.net/spec/api-security/1.0/conf/OAS30security"
+      ],
+      "links": [
+        {
+          "href": "https://portfolio.i7es.click/api",
+          "title": "Implementation example",
+          "rel": "example"
+        },
+        {
+          "href": "https://security.i7es.click/api",
+          "title": "Implementation example",
+          "rel": "example"
+        },
+        {
+          "href": "https://greeting.i7es.click/api",
+          "title": "Implementation example",
+          "rel": "example"
+        }
+      ],
+      "maturity": "mature",
+      "scope": "unstable",
+      "tags": [
+        "oas30",
+        "OpenAPI 3.0",
+        "security"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-oas30-security/build/annotated/oas30/security/security-object/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-oas30-security/build/annotated/oas30/security/security-object/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-oas30-security/_sources/security-object/schema.json",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-oas30-security/_sources/security-object/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-oas30-security/build/generateddocs/markdown/oas30/security/security-object/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-oas30-security/build/generateddocs/json-full/oas30/security/security-object/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-oas30-security/bblock/ogc.oas30.security.security-object"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-oas30-security/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks-oas30-security/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks-oas30-security/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks-oas30-security/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}
