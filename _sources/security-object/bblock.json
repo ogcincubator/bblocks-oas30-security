@@ -1,0 +1,44 @@
+{
+  "name": "Security Object Schema",
+  "abstract": "Schema for OpenAPI 3.0 security objects in OGC APIs",
+  "status": "under-development",
+  "dateTimeAddition": "2026-03-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2023-04-05",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "sources": [
+    {
+      "title": "OpenAPI 3.0 Security Requirement Object",
+      "link": "https://swagger.io/specification/v3/#security-requirement-object"
+    },
+    {
+      "title": "OpenAPI 3.0 Security Scheme Object",
+      "link": "https://swagger.io/specification/v3/#security-scheme-object"
+    }
+  ],
+  "conformanceClasses": [
+    "http://www.opengis.net/spec/api-security/1.0/conf/OAS30security"
+  ],
+  "links": [
+    {
+      "href": "https://portfolio.i7es.click/api",
+      "title": "Implementation example",
+      "rel": "example"
+    },
+    {
+      "href": "https://security.i7es.click/api",
+      "title": "Implementation example",
+      "rel": "example"
+    },
+    {
+      "href": "https://greeting.i7es.click/api",
+      "title": "Implementation example",
+      "rel": "example"
+    }
+  ],
+  "maturity": "mature",
+  "scope": "unstable",
+  "tags": ["oas30", "OpenAPI 3.0", "security"]
+}
