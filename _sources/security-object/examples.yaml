@@ -1,0 +1,23 @@
+- title: Example of the usage of OAS security with an OGC API.
+
+  snippets:
+    - language: json
+      # if a local copy made preserve the source in this comment..
+      ref: https://portfolio.i7es.click/api
+      base-uri: https://example.com/bblocks-oas30-security/example-1/
+
+- title: Example of the usage of OAS security with an OGC API.
+
+  snippets:
+    - language: json
+      # if a local copy made preserve the source in this comment..
+      ref: https://security.i7es.click/api
+      base-uri: https://example.com/bblocks-oas30-security/example-2/
+
+- title: Examples of the usage of OAS security with an OGC API
+
+  snippets:
+    - language: json
+      # if a local copy made preserve the source in this comment..
+      ref: https://greeting.i7es.click/api
+      base-uri: https://example.com/bblocks-oas30-security/example-3/

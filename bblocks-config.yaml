@@ -4,7 +4,7 @@ name: OpenAPI 3.0 Security
 # Short abstract for this collection (optional)
 abstract: |
   Standard schemas for defining
-  [OpenAPI 3.0 security requirements](https://swagger.io/specification/v3/#security-requirement-object) in OGC APIs. 
+  [OpenAPI 3.0 security requirements](https://spec.openapis.org/oas/v3.0.4.html#security-scheme-object-0) in OGC APIs. 
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
 identifier-prefix: ogc.oas30.security.
