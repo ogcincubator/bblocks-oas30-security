@@ -11,11 +11,23 @@
   "sources": [
     {
       "title": "OpenAPI 3.0 Security Requirement Object",
-      "link": "https://swagger.io/specification/v3/#security-requirement-object"
+      "link": "https://spec.openapis.org/oas/v3.0.4.html#security-requirement-object"
     },
     {
       "title": "OpenAPI 3.0 Security Scheme Object",
-      "link": "https://swagger.io/specification/v3/#security-scheme-object"
+      "link": "https://spec.openapis.org/oas/v3.0.4.html#security-scheme-object-0"
+    },
+    {
+      "title": "Implementation example 1",
+      "link": "https://portfolio.i7es.click/api"
+    },
+    {
+      "title": "Implementation example 2",
+      "link": "https://security.i7es.click/api"
+    },
+    {
+      "title": "Implementation example 3",
+      "link": "https://greeting.i7es.click/api"
     }
   ],
   "conformanceClasses": [
