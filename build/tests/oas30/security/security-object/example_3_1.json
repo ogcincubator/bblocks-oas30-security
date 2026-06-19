@@ -1,0 +1,611 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "summary": "The JSON/HTML version of a landing page containing links to the API documentation.",
+      "description": "A landing page for the Personalized Greeting API.",
+      "parameters": [],
+      "get": {
+        "operationId": "getLandingPage",
+        "summary": "Retrive a landing page for the API.  The landing page may return a HTML or JSON body with links to various endpoints of the API.",
+        "description": "Returns the landing page for the API",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": {
+                    "title": "Portfolio of APIs",
+                    "description": "Contains a portfolio listing of APIs.",
+                    "links": [
+                      {
+                        "rel": "api-catalog",
+                        "href": "greeting.i7es.click/.well-known/api-catalog",
+                        "title": "Portfolio of APIs",
+                        "type": "application/linkset+json"
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/.well-known/{well_known_name}": {
+      "summary": "There are may dot well-known specifications avaliable and the well_known_name path parameter should describe a specific specification.  The Personalized Greeting API is part of a portfolio of APIs that Michael is putting together.  The well know location for api-catalog is part of this demonstration.  So if you specify api-catalog for the well_known_name, you will get a list of APIs that Michael is developing.",
+      "description": "Dot well-known is an Internet standard for describing common things on a website.",
+      "parameters": [],
+      "get": {
+        "operationId": "getSpecificWellKnown",
+        "summary": "Some URL represent well know Internet services.  Use this endpoint to retrieve information from a specified well-known service.",
+        "description": "Returns specific well-known information about the API",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "well_known_name",
+            "schema": {
+              "type": "string",
+              "example": "api-catalog"
+            },
+            "description": "The name of the well-known information to retrieve.",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "requestBody": {},
+        "responses": {
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/linkset+json": {
+                "schema": {
+                  "type": "object",
+                  "example": {
+                    "linkset": [
+                      {
+                        "anchor": "https://greeting.i7es.click",
+                        "service-desc": {
+                          "type": "application/vnd.oai.openapi+json;version=3.0",
+                          "href": "https://greeting.i7es.click/api"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/api": {
+      "summary": "The intent of the 'api' endpoint is to provide developers and development tools with a machine-readable description of the API.  The documentation is provided as a JSON document that follows version 3.0 of the OpenAPI Specification.",
+      "description": "A JSON view of the Personalized Greeting API as document using the OpenAPI Specification version 3.0.",
+      "parameters": [],
+      "get": {
+        "operationId": "getApiInfo",
+        "summary": "The JSON representation of this document.  The intent is to allow developer tools create code stubs to call the API.",
+        "description": "Returns information about the API",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/vnd.oai.openapi+json;version=3.0": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/conformance": {
+      "summary": "One of the purposes of this API is to investigate various ways of documenting APIs that conform to requirements published by the Open GeoSpatial Consortium (OGC).  In particular, to describe security controls in an API.  Thus, this endpoint describes a list of requirements.",
+      "description": "Information about the conformance requirements for the Personalized Greeting API.",
+      "parameters": [],
+      "get": {
+        "operationId": "getConformance",
+        "summary": "This API conforms to the OGC API Common Specification and IETF RFC for Secuity.  Use this endpoint to see a list of supported conformance classes.",
+        "description": "Return conformance information for the API",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "example": {
+                    "conformsTo": [
+                      "http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core"
+                    ]
+                  }
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/conformance/{conformance_alias}": {
+      "summary": "One of the purposes of this API is to investigate various ways of documenting APIs that conform to requirements published by the Open GeoSpatial Consortium (OGC).  In particular, to describe security controls in an API.  Thus, this endpoint describes a list of requirements, when the conformance_alias is not specified, or a particular conformance requirement, when the conformance_alias is specified.  ",
+      "description": "Information about a conformance requirement for the Personalized Greeting API.",
+      "parameters": [],
+      "get": {
+        "operationId": "getSpecificConformance",
+        "summary": "Use this endpoint to retrieve information about a specific conformance class the API supports.",
+        "description": "Returns specific conformance information for the API",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "conformance_alias",
+            "schema": {
+              "type": "string",
+              "example": "core"
+            },
+            "description": "The alias of the conformance information to retrieve",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "requestBody": {},
+        "responses": {
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/documentation": {
+      "summary": "The intent of the documentation endpoint is to generate documentations from the content of an OpenAPI document.  The objective is for developers to understand and experiment with creating authenticated personalized greetings.",
+      "description": "The HTML view of the methods and properties for the Personalized Greeting API.",
+      "parameters": [],
+      "get": {
+        "operationId": "getApiDocumentation",
+        "summary": "The HTML representation of this document.  The intent is to allow developers to learn about the API and experiment with the use of the API.",
+        "description": "Returns documentation for the API",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/index.html": {
+      "summary": "An HTML version of a landing page containing links to the API documentation.",
+      "description": "A landing page for the Personalized Greeting API.",
+      "parameters": [],
+      "get": {
+        "operationId": "getHomepage",
+        "summary": "The HTML representation of the Personalized Greeting API Landing Page.  The page contains information about the API.",
+        "description": "Returns the HTML homepage for the API",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/retrieve": {
+      "summary": "An authorized user may use this endpoint to retrieve a JSON greeting to the World with a GET method.  An authorized user may also use this endpoint to retrieve a JSON greeting base on a Geographic location they provide.  The endpoint is protected with Basic Authentication.  You can register a new user account at https://security.i7es.click/register.  Everyone is free to sign up.  The code is available on GitHub at  https://github.com/leedahl/OGC_LandingPage with an Open Source MIT license.",
+      "description": "A Hello World or Geographic greeting depending on if the request is GET or POST operation.",
+      "parameters": [],
+      "get": {
+        "operationId": "getDefaultGreeting",
+        "summary": "Retrieve a Hello World greeting response.  The retrieve method demonstratates the use of Basic Authentication to access a protected API.",
+        "description": "Returns a default greeting message",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Basic authentication challenge"
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Greeting"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "deprecated": false
+      },
+      "post": {
+        "operationId": "getLocationGreeting",
+        "summary": "Retrieve a Geographic Location based greeting.  The retrieve method demonstratates the use of Basic Authentication to access a protected API.",
+        "description": "Returns a greeting based on a specified location",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "description": "A GeoJSON Point Geometry.",
+          "content": {
+            "application/geo+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingPoint"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Basic authentication challenge"
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GreetingStGeorge"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/retrieve/{name}": {
+      "summary": "An authorized user may use this endpoint to retrieve a JSON greeting to the a personalized name.  The endpoint is protected with Basic Authentication.  You can register a new user account at https://security.i7es.click/register.  Everyone is free to sign up.  The code is available on GitHub at  https://github.com/leedahl/OGC_LandingPage with an Open Source MIT license.",
+      "description": "A Personalized Hello World style greeting that greets the name specified in the {name} paath parameter.",
+      "parameters": [],
+      "get": {
+        "operationId": "getPersonalizedGreeting",
+        "summary": "Retrieve a Personalize Greeting response based on the specified name.  The endpoint is an.example of a protected endpoint using Basic Authentication.",
+        "description": "Returns a personalized greeting message for the specified name",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "name",
+            "schema": {
+              "type": "string",
+              "example": "Jim"
+            },
+            "description": "The name to include in the greeting",
+            "in": "path",
+            "required": false
+          }
+        ],
+        "requestBody": {},
+        "responses": {
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Basic authentication challenge"
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GreetingJim"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Not Authorized"
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A URI reference that identifies the problem type",
+            "example": "about:blank"
+          },
+          "title": {
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type",
+            "example": "Internal Server Error"
+          },
+          "detail": {
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem",
+            "example": "Error invoking target function"
+          }
+        }
+      },
+      "Greeting": {
+        "type": "object",
+        "required": [
+          "greeting"
+        ],
+        "properties": {
+          "greeting": {
+            "type": "string",
+            "description": "The greeting message",
+            "example": "Hello World!"
+          }
+        }
+      },
+      "GreetingJim": {
+        "type": "object",
+        "properties": {
+          "greeting": {
+            "type": "string",
+            "description": "The greeting message",
+            "example": "Hello Jim!"
+          }
+        },
+        "required": [
+          "greeting"
+        ]
+      },
+      "GreetingPoint": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "description": "The type of Geometry.",
+            "type": "string",
+            "enum": [
+              "Point"
+            ],
+            "example": "Point"
+          },
+          "coordinates": {
+            "description": "A set of longitude, latitude coordinate values.",
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "float"
+            },
+            "example": "[-113.6246819, 37.0891407]"
+          }
+        },
+        "required": [
+          "type",
+          "coordinates"
+        ]
+      },
+      "GreetingStGeorge": {
+        "type": "object",
+        "properties": {
+          "greeting": {
+            "type": "string",
+            "description": "The greeting message",
+            "example": "Hello to the kind people of St. George, Washington County, Utah, United States!"
+          }
+        },
+        "required": [
+          "greeting"
+        ]
+      }
+    },
+    "parameters": {},
+    "responses": {},
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "description": "Basic authentication using username and password",
+        "scheme": "basic"
+      }
+    }
+  },
+  "info": {
+    "title": "Personalized Hello World Greeting API",
+    "description": "An authentication protected API to demonstratate securing an API with a Personalized Hello World style Greeting.",
+    "version": "1.0.0",
+    "termsOfService": "",
+    "contact": {
+      "name": "Development Support",
+      "url": "https://github.com/leedahl",
+      "email": "support@leedahl.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "externalDocs": {},
+  "servers": [
+    {
+      "url": "https://greeting.i7es.click",
+      "description": "Production server where the documentation and API reside.",
+      "variables": {}
+    }
+  ]
+}

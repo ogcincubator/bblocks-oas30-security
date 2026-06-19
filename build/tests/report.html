@@ -64,9 +64,9 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2026-03-05T10:04:16.098378+00:00</small>
-                <p class="summary fw-semibold text-success">
-                    Number of passing building blocks: 1 / 1 (100%)
+            <small class="datetime">Generated at 2026-06-19T08:49:55.813361+00:00</small>
+                <p class="summary fw-semibold text-danger">
+                    Number of passing building blocks: 0 / 1 (0%)
                 </p>
             <div class="text-end small" id="expand-collapse">
                 <a href="#" class="expand-all">Expand all</a>
@@ -75,7 +75,7 @@
                 <div class="accordion mt-2" id="bblock-reports">
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.oas30.security.security-object" id="bblock-ogc.oas30.security.security-object">
                             <h2 class="accordion-header bblock-title anchor-container">
-                                <button class="accordion-button collapsed" type="button"
+                                <button class="accordion-button " type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.oas30\.security\.security-object">
                                     <div class="flex-fill">
@@ -84,15 +84,1609 @@
                                         <a class="anchor" href="#bblock-ogc.oas30.security.security-object">¶</a>
                                     </div>
 
-                                    <span class="badge text-bg-success me-2">
-                                            Passed
-                                            (no tests)
+                                    <span class="badge text-bg-danger me-2">
+                                            Tests Failed
+                                            (0% passed)
                                     </span>
                                 </button>
                             </h2>
-                            <div class="accordion-collapse collapse " id="bblock-collapse-ogc.oas30.security.security-object">
+                            <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.oas30.security.security-object">
                                 <div class="accordion-body">
-                                        <div class="alert alert-info mb-0">No tests were found for this building block.</div>
+                                        <p class="summary fw-semibold text-danger">
+                                            Test passed: 0 / 3
+                                        </p>
+                                        <div class="card mb-2 validation-item " id="item-ogc.oas30.security.security-object-1">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-1"
+                                                            aria-expanded="false" aria-controls="uid-1"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="https://portfolio.i7es.click/api" target="_blank">example_1_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.oas30.security.security-object-1">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-1">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using https://portfolio.i7es.click/api from examples</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: Additional properties are not allowed (&#x27;components&#x27;, &#x27;externalDocs&#x27;, &#x27;info&#x27;, &#x27;openapi&#x27;, &#x27;paths&#x27;, &#x27;servers&#x27; were unexpected)
+
+Failed validating &#x27;additionalProperties&#x27; in schema:
+    {&#x27;$id&#x27;: &#x27;https://example.com/schemas/definition-ref.schema.json&#x27;,
+     &#x27;$schema&#x27;: &#x27;https://json-schema.org/draft/2020-12/schema&#x27;,
+     &#x27;additionalProperties&#x27;: False,
+     &#x27;examples&#x27;: [{&#x27;definition&#x27;: {&#x27;application/json&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}},
+                  {&#x27;definition&#x27;: {&#x27;application/yaml&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}},
+                  {&#x27;definition&#x27;: {&#x27;application/json&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;,
+                                  &#x27;application/yaml&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}}],
+     &#x27;properties&#x27;: {&#x27;definition&#x27;: {&#x27;additionalProperties&#x27;: False,
+                                   &#x27;anyOf&#x27;: [{&#x27;required&#x27;: [&#x27;application/json&#x27;]},
+                                             {&#x27;required&#x27;: [&#x27;application/yaml&#x27;]}],
+                                   &#x27;description&#x27;: &#x27;Media-type keyed &#x27;
+                                                  &#x27;locations of the API &#x27;
+                                                  &#x27;definition.&#x27;,
+                                   &#x27;properties&#x27;: {&#x27;application/json&#x27;: {&#x27;description&#x27;: &#x27;Absolute &#x27;
+                                                                                      &#x27;URI &#x27;
+                                                                                      &#x27;to &#x27;
+                                                                                      &#x27;the &#x27;
+                                                                                      &#x27;OpenAPI &#x27;
+                                                                                      &#x27;definition &#x27;
+                                                                                      &#x27;in &#x27;
+                                                                                      &#x27;JSON &#x27;
+                                                                                      &#x27;form.&#x27;,
+                                                                       &#x27;format&#x27;: &#x27;uri&#x27;,
+                                                                       &#x27;type&#x27;: &#x27;string&#x27;},
+                                                  &#x27;application/yaml&#x27;: {&#x27;description&#x27;: &#x27;Absolute &#x27;
+                                                                                      &#x27;URI &#x27;
+                                                                                      &#x27;to &#x27;
+                                                                                      &#x27;the &#x27;
+                                                                                      &#x27;OpenAPI &#x27;
+                                                                                      &#x27;definition &#x27;
+                                                                                      &#x27;in &#x27;
+                                                                                      &#x27;YAML &#x27;
+                                                                                      &#x27;form.&#x27;,
+                                                                       &#x27;format&#x27;: &#x27;uri&#x27;,
+                                                                       &#x27;type&#x27;: &#x27;string&#x27;}},
+                                   &#x27;type&#x27;: &#x27;object&#x27;}},
+     &#x27;required&#x27;: [&#x27;definition&#x27;],
+     &#x27;title&#x27;: &#x27;API Definition Locations&#x27;,
+     &#x27;type&#x27;: &#x27;object&#x27;}
+
+On instance:
+    {&#x27;components&#x27;: {&#x27;parameters&#x27;: {},
+                    &#x27;responses&#x27;: {},
+                    &#x27;schemas&#x27;: {&#x27;Error&#x27;: {&#x27;properties&#x27;: {&#x27;detail&#x27;: {&#x27;description&#x27;: &#x27;A &#x27;
+                                                                                   &#x27;human-readable &#x27;
+                                                                                   &#x27;explanation &#x27;
+                                                                                   &#x27;specific &#x27;
+                                                                                   &#x27;to &#x27;
+                                                                                   &#x27;this &#x27;
+                                                                                   &#x27;occurrence &#x27;
+                                                                                   &#x27;of &#x27;
+                                                                                   &#x27;the &#x27;
+                                                                                   &#x27;problem&#x27;,
+                                                                    &#x27;type&#x27;: &#x27;string&#x27;},
+                                                         &#x27;status&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                   &#x27;HTTP &#x27;
+                                                                                   &#x27;status &#x27;
+                                                                                   &#x27;code&#x27;,
+                                                                    &#x27;type&#x27;: &#x27;integer&#x27;},
+                                                         &#x27;title&#x27;: {&#x27;description&#x27;: &#x27;A &#x27;
+                                                                                  &#x27;short, &#x27;
+                                                                                  &#x27;human-readable &#x27;
+                                                                                  &#x27;summary &#x27;
+                                                                                  &#x27;of &#x27;
+                                                                                  &#x27;the &#x27;
+                                                                                  &#x27;problem &#x27;
+                                                                                  &#x27;type&#x27;,
+                                                                   &#x27;type&#x27;: &#x27;string&#x27;},
+                                                         &#x27;type&#x27;: {&#x27;description&#x27;: &#x27;A &#x27;
+                                                                                 &#x27;URI &#x27;
+                                                                                 &#x27;reference &#x27;
+                                                                                 &#x27;that &#x27;
+                                                                                 &#x27;identifies &#x27;
+                                                                                 &#x27;the &#x27;
+                                                                                 &#x27;problem &#x27;
+                                                                                 &#x27;type&#x27;,
+                                                                  &#x27;format&#x27;: &#x27;uri&#x27;,
+                                                                  &#x27;type&#x27;: &#x27;string&#x27;}},
+                                          &#x27;required&#x27;: [&#x27;type&#x27;,
+                                                       &#x27;title&#x27;,
+                                                       &#x27;status&#x27;],
+                                          &#x27;type&#x27;: &#x27;object&#x27;},
+                                &#x27;UserManagementOperation&#x27;: {&#x27;properties&#x27;: {&#x27;api_id&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                     &#x27;API &#x27;
+                                                                                                     &#x27;ID &#x27;
+                                                                                                     &#x27;for &#x27;
+                                                                                                     &#x27;grant/revoke &#x27;
+                                                                                                     &#x27;operations&#x27;,
+                                                                                      &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                           &#x27;email&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                    &#x27;email &#x27;
+                                                                                                    &#x27;address &#x27;
+                                                                                                    &#x27;for &#x27;
+                                                                                                    &#x27;the &#x27;
+                                                                                                    &#x27;user &#x27;
+                                                                                                    &#x27;(for &#x27;
+                                                                                                    &#x27;create/update &#x27;
+                                                                                                    &#x27;operations)&#x27;,
+                                                                                     &#x27;format&#x27;: &#x27;email&#x27;,
+                                                                                     &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                           &#x27;fullName&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                       &#x27;full &#x27;
+                                                                                                       &#x27;name &#x27;
+                                                                                                       &#x27;of &#x27;
+                                                                                                       &#x27;the &#x27;
+                                                                                                       &#x27;user &#x27;
+                                                                                                       &#x27;(for &#x27;
+                                                                                                       &#x27;create/update &#x27;
+                                                                                                       &#x27;operations)&#x27;,
+                                                                                        &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                           &#x27;operation&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                        &#x27;operation &#x27;
+                                                                                                        &#x27;to &#x27;
+                                                                                                        &#x27;perform&#x27;,
+                                                                                         &#x27;enum&#x27;: [&#x27;create&#x27;,
+                                                                                                  &#x27;update&#x27;,
+                                                                                                  &#x27;delete&#x27;,
+                                                                                                  &#x27;grant&#x27;,
+                                                                                                  &#x27;revoke&#x27;],
+                                                                                         &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                           &#x27;password&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                       &#x27;password &#x27;
+                                                                                                       &#x27;for &#x27;
+                                                                                                       &#x27;the &#x27;
+                                                                                                       &#x27;user &#x27;
+                                                                                                       &#x27;(for &#x27;
+                                                                                                       &#x27;create/update &#x27;
+                                                                                                       &#x27;operations)&#x27;,
+                                                                                        &#x27;format&#x27;: &#x27;password&#x27;,
+                                                                                        &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                           &#x27;username&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                       &#x27;username &#x27;
+                                                                                                       &#x27;of &#x27;
+                                                                                                       &#x27;the &#x27;
+                                                                                                       &#x27;target &#x27;
+                                                                                                       &#x27;user&#x27;,
+                                                                                        &#x27;type&#x27;: &#x27;string&#x27;}},
+                                                            &#x27;required&#x27;: [&#x27;operation&#x27;],
+                                                            &#x27;type&#x27;: &#x27;object&#x27;},
+                                &#x27;UserRegistration&#x27;: {&#x27;properties&#x27;: {&#x27;email&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                             &#x27;email &#x27;
+                                                                                             &#x27;address &#x27;
+                                                                                             &#x27;for &#x27;
+                                                                                             &#x27;the &#x27;
+                                                                                             &#x27;new &#x27;
+                                                                                             &#x27;user&#x27;,
+                                                                              &#x27;format&#x27;: &#x27;email&#x27;,
+                                                                              &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                    &#x27;fullName&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                &#x27;full &#x27;
+                                                                                                &#x27;name &#x27;
+                                                                                                &#x27;of &#x27;
+                                                                                                &#x27;the &#x27;
+                                                                                                &#x27;user&#x27;,
+                                                                                 &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                    &#x27;password&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                &#x27;password &#x27;
+                                                                                                &#x27;for &#x27;
+                                                                                                &#x27;the &#x27;
+                                                                                                &#x27;new &#x27;
+                                                                                                &#x27;user&#x27;,
+                                                                                 &#x27;format&#x27;: &#x27;password&#x27;,
+                                                                                 &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                    &#x27;username&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                &#x27;username &#x27;
+                                                                                                &#x27;for &#x27;
+                                                                                                &#x27;the &#x27;
+                                                                                                &#x27;new &#x27;
+                                                                                                &#x27;user&#x27;,
+                                                                                 &#x27;type&#x27;: &#x27;string&#x27;}},
+                                                     &#x27;required&#x27;: [&#x27;username&#x27;,
+                                                                  &#x27;password&#x27;,
+                                                                  &#x27;email&#x27;],
+                                                     &#x27;type&#x27;: &#x27;object&#x27;}},
+                    &#x27;securitySchemes&#x27;: {&#x27;basicAuth&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                     &#x27;authentication &#x27;
+                                                                     &#x27;using &#x27;
+                                                                     &#x27;username &#x27;
+                                                                     &#x27;and &#x27;
+                                                                     &#x27;password&#x27;,
+                                                      &#x27;scheme&#x27;: &#x27;basic&#x27;,
+                                                      &#x27;type&#x27;: &#x27;http&#x27;}}},
+     &#x27;externalDocs&#x27;: {},
+     &#x27;info&#x27;: {&#x27;contact&#x27;: {&#x27;name&#x27;: &#x27;Michael&#x27;, &#x27;url&#x27;: &#x27;https://i7es.click&#x27;},
+              &#x27;description&#x27;: &#x27;Landing Page for My APIs.&#x27;,
+              &#x27;license&#x27;: {},
+              &#x27;termsOfService&#x27;: &#x27;&#x27;,
+              &#x27;title&#x27;: &#x27;My APIs&#x27;,
+              &#x27;version&#x27;: &#x27;1.0.0&#x27;},
+     &#x27;openapi&#x27;: &#x27;3.0.0&#x27;,
+     &#x27;paths&#x27;: {&#x27;/&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                     &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                             &#x27;description&#x27;: &#x27;Returns the landing page for &#x27;
+                                            &#x27;the API portfolio&#x27;,
+                             &#x27;operationId&#x27;: &#x27;getLandingPage&#x27;,
+                             &#x27;parameters&#x27;: [],
+                             &#x27;requestBody&#x27;: {},
+                             &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                   &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                  &#x27;response&#x27;}},
+                             &#x27;security&#x27;: [],
+                             &#x27;summary&#x27;: &#x27;API Landing Page&#x27;,
+                             &#x27;tags&#x27;: []},
+                     &#x27;parameters&#x27;: [],
+                     &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/.well-known&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                        &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                       &#x27;information about &#x27;
+                                                       &#x27;well-known &#x27;
+                                                       &#x27;endpoints&#x27;,
+                                        &#x27;operationId&#x27;: &#x27;getWellKnown&#x27;,
+                                        &#x27;parameters&#x27;: [],
+                                        &#x27;requestBody&#x27;: {},
+                                        &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                          &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                              &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                             &#x27;response&#x27;}},
+                                        &#x27;security&#x27;: [],
+                                        &#x27;summary&#x27;: &#x27;Well-Known Endpoint&#x27;,
+                                        &#x27;tags&#x27;: []},
+                                &#x27;parameters&#x27;: [],
+                                &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/.well-known/{well_known_name}&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                                  &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                                          &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                                         &#x27;information &#x27;
+                                                                         &#x27;about &#x27;
+                                                                         &#x27;a &#x27;
+                                                                         &#x27;specific &#x27;
+                                                                         &#x27;well-known &#x27;
+                                                                         &#x27;endpoint&#x27;,
+                                                          &#x27;operationId&#x27;: &#x27;getSpecificWellKnown&#x27;,
+                                                          &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;Name &#x27;
+                                                                                         &#x27;of &#x27;
+                                                                                         &#x27;the &#x27;
+                                                                                         &#x27;well-known &#x27;
+                                                                                         &#x27;endpoint&#x27;,
+                                                                          &#x27;in&#x27;: &#x27;path&#x27;,
+                                                                          &#x27;name&#x27;: &#x27;well_known_name&#x27;,
+                                                                          &#x27;required&#x27;: True,
+                                                                          &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}],
+                                                          &#x27;requestBody&#x27;: {},
+                                                          &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                                            &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                                &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                                               &#x27;response&#x27;},
+                                                                        &#x27;404&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                                &#x27;description&#x27;: &#x27;Well-known &#x27;
+                                                                                               &#x27;endpoint &#x27;
+                                                                                               &#x27;not &#x27;
+                                                                                               &#x27;found&#x27;}},
+                                                          &#x27;security&#x27;: [],
+                                                          &#x27;summary&#x27;: &#x27;Specific &#x27;
+                                                                     &#x27;Well-Known &#x27;
+                                                                     &#x27;Endpoint&#x27;,
+                                                          &#x27;tags&#x27;: []},
+                                                  &#x27;parameters&#x27;: [],
+                                                  &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/api&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                        &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                &#x27;description&#x27;: &#x27;Returns information about &#x27;
+                                               &#x27;available APIs&#x27;,
+                                &#x27;operationId&#x27;: &#x27;getApiInfo&#x27;,
+                                &#x27;parameters&#x27;: [],
+                                &#x27;requestBody&#x27;: {},
+                                &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                  &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                      &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                     &#x27;response&#x27;}},
+                                &#x27;security&#x27;: [],
+                                &#x27;summary&#x27;: &#x27;API Information&#x27;,
+                                &#x27;tags&#x27;: []},
+                        &#x27;parameters&#x27;: [],
+                        &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/api/openapi&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                &#x27;parameters&#x27;: [],
+                                &#x27;post&#x27;: {&#x27;deprecated&#x27;: False,
+                                         &#x27;description&#x27;: &#x27;Uploads an &#x27;
+                                                        &#x27;OpenAPI document &#x27;
+                                                        &#x27;to the system&#x27;,
+                                         &#x27;operationId&#x27;: &#x27;uploadOpenApiDocument&#x27;,
+                                         &#x27;parameters&#x27;: [],
+                                         &#x27;requestBody&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;description&#x27;: &#x27;OpenAPI &#x27;
+                                                                                                                    &#x27;3.0 &#x27;
+                                                                                                                    &#x27;document&#x27;,
+                                                                                                     &#x27;type&#x27;: &#x27;object&#x27;}}},
+                                                         &#x27;required&#x27;: True},
+                                         &#x27;responses&#x27;: {&#x27;201&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;properties&#x27;: {&#x27;api_id&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                          &#x27;details&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;},
+                                                                                                                          &#x27;message&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                          &#x27;version&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}},
+                                                                                                           &#x27;type&#x27;: &#x27;object&#x27;}}},
+                                                               &#x27;description&#x27;: &#x27;OpenAPI &#x27;
+                                                                              &#x27;document &#x27;
+                                                                              &#x27;successfully &#x27;
+                                                                              &#x27;processed&#x27;},
+                                                       &#x27;400&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                               &#x27;description&#x27;: &#x27;Invalid &#x27;
+                                                                              &#x27;request&#x27;},
+                                                       &#x27;401&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                               &#x27;description&#x27;: &#x27;Unauthorized&#x27;,
+                                                               &#x27;headers&#x27;: {&#x27;WWW-Authenticate&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                                                               &#x27;authentication &#x27;
+                                                                                                               &#x27;challenge&#x27;,
+                                                                                                &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}}},
+                                                       &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                               &#x27;description&#x27;: &#x27;Server &#x27;
+                                                                              &#x27;error&#x27;}},
+                                         &#x27;security&#x27;: [{&#x27;basicAuth&#x27;: []}],
+                                         &#x27;summary&#x27;: &#x27;Upload OpenAPI &#x27;
+                                                    &#x27;Document&#x27;,
+                                         &#x27;tags&#x27;: []},
+                                &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/api/openapi/{api_id}&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                         &#x27;parameters&#x27;: [],
+                                         &#x27;post&#x27;: {&#x27;deprecated&#x27;: False,
+                                                  &#x27;description&#x27;: &#x27;Updates &#x27;
+                                                                 &#x27;an &#x27;
+                                                                 &#x27;existing &#x27;
+                                                                 &#x27;OpenAPI &#x27;
+                                                                 &#x27;document&#x27;,
+                                                  &#x27;operationId&#x27;: &#x27;updateOpenApiDocument&#x27;,
+                                                  &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;ID &#x27;
+                                                                                 &#x27;of &#x27;
+                                                                                 &#x27;the &#x27;
+                                                                                 &#x27;API &#x27;
+                                                                                 &#x27;to &#x27;
+                                                                                 &#x27;update&#x27;,
+                                                                  &#x27;in&#x27;: &#x27;path&#x27;,
+                                                                  &#x27;name&#x27;: &#x27;api_id&#x27;,
+                                                                  &#x27;required&#x27;: True,
+                                                                  &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}],
+                                                  &#x27;requestBody&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;description&#x27;: &#x27;OpenAPI &#x27;
+                                                                                                                             &#x27;3.0 &#x27;
+                                                                                                                             &#x27;document&#x27;,
+                                                                                                              &#x27;type&#x27;: &#x27;object&#x27;}}},
+                                                                  &#x27;required&#x27;: True},
+                                                  &#x27;responses&#x27;: {&#x27;201&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;properties&#x27;: {&#x27;api_id&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                                   &#x27;details&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;},
+                                                                                                                                   &#x27;message&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                                   &#x27;version&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}},
+                                                                                                                    &#x27;type&#x27;: &#x27;object&#x27;}}},
+                                                                        &#x27;description&#x27;: &#x27;OpenAPI &#x27;
+                                                                                       &#x27;document &#x27;
+                                                                                       &#x27;successfully &#x27;
+                                                                                       &#x27;updated&#x27;},
+                                                                &#x27;400&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                        &#x27;description&#x27;: &#x27;Invalid &#x27;
+                                                                                       &#x27;request&#x27;},
+                                                                &#x27;401&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                        &#x27;description&#x27;: &#x27;Unauthorized&#x27;,
+                                                                        &#x27;headers&#x27;: {&#x27;WWW-Authenticate&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                                                                        &#x27;authentication &#x27;
+                                                                                                                        &#x27;challenge&#x27;,
+                                                                                                         &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}}},
+                                                                &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                        &#x27;description&#x27;: &#x27;Server &#x27;
+                                                                                       &#x27;error&#x27;}},
+                                                  &#x27;security&#x27;: [{&#x27;basicAuth&#x27;: []}],
+                                                  &#x27;summary&#x27;: &#x27;Update &#x27;
+                                                             &#x27;OpenAPI &#x27;
+                                                             &#x27;Document&#x27;,
+                                                  &#x27;tags&#x27;: []},
+                                         &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/conformance&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                        &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                       &#x27;conformance &#x27;
+                                                       &#x27;information for &#x27;
+                                                       &#x27;the APIs&#x27;,
+                                        &#x27;operationId&#x27;: &#x27;getConformance&#x27;,
+                                        &#x27;parameters&#x27;: [],
+                                        &#x27;requestBody&#x27;: {},
+                                        &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                          &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                              &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                             &#x27;response&#x27;}},
+                                        &#x27;security&#x27;: [],
+                                        &#x27;summary&#x27;: &#x27;Conformance &#x27;
+                                                   &#x27;Information&#x27;,
+                                        &#x27;tags&#x27;: []},
+                                &#x27;parameters&#x27;: [],
+                                &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/conformance/{conformance_alias}&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                                    &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                                            &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                                           &#x27;conformance &#x27;
+                                                                           &#x27;information &#x27;
+                                                                           &#x27;for &#x27;
+                                                                           &#x27;a &#x27;
+                                                                           &#x27;specific &#x27;
+                                                                           &#x27;API&#x27;,
+                                                            &#x27;operationId&#x27;: &#x27;getSpecificConformance&#x27;,
+                                                            &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;Alias &#x27;
+                                                                                           &#x27;of &#x27;
+                                                                                           &#x27;the &#x27;
+                                                                                           &#x27;conformance &#x27;
+                                                                                           &#x27;information&#x27;,
+                                                                            &#x27;in&#x27;: &#x27;path&#x27;,
+                                                                            &#x27;name&#x27;: &#x27;conformance_alias&#x27;,
+                                                                            &#x27;required&#x27;: True,
+                                                                            &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}],
+                                                            &#x27;requestBody&#x27;: {},
+                                                            &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                                              &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                                  &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                                                 &#x27;response&#x27;},
+                                                                          &#x27;404&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                                  &#x27;description&#x27;: &#x27;Conformance &#x27;
+                                                                                                 &#x27;alias &#x27;
+                                                                                                 &#x27;not &#x27;
+                                                                                                 &#x27;found&#x27;}},
+                                                            &#x27;security&#x27;: [],
+                                                            &#x27;summary&#x27;: &#x27;Specific &#x27;
+                                                                       &#x27;Conformance &#x27;
+                                                                       &#x27;Information&#x27;,
+                                                            &#x27;tags&#x27;: []},
+                                                    &#x27;parameters&#x27;: [],
+                                                    &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/documentation&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                  &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                          &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                         &#x27;documentation &#x27;
+                                                         &#x27;for the APIs&#x27;,
+                                          &#x27;operationId&#x27;: &#x27;getDocumentation&#x27;,
+                                          &#x27;parameters&#x27;: [],
+                                          &#x27;requestBody&#x27;: {},
+                                          &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                               &#x27;response&#x27;}},
+                                          &#x27;security&#x27;: [],
+                                          &#x27;summary&#x27;: &#x27;API Documentation&#x27;,
+                                          &#x27;tags&#x27;: []},
+                                  &#x27;parameters&#x27;: [],
+                                  &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/index.html&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                               &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                       &#x27;description&#x27;: &#x27;Returns the landing &#x27;
+                                                      &#x27;page for the API &#x27;
+                                                      &#x27;portfolio in HTML &#x27;
+                                                      &#x27;format&#x27;,
+                                       &#x27;operationId&#x27;: &#x27;getLandingPageHtml&#x27;,
+                                       &#x27;parameters&#x27;: [],
+                                       &#x27;requestBody&#x27;: {},
+                                       &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                             &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                            &#x27;response&#x27;}},
+                                       &#x27;security&#x27;: [],
+                                       &#x27;summary&#x27;: &#x27;API Landing Page (HTML)&#x27;,
+                                       &#x27;tags&#x27;: []},
+                               &#x27;parameters&#x27;: [],
+                               &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/register&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                             &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                     &#x27;description&#x27;: &#x27;Returns a &#x27;
+                                                    &#x27;registration form for &#x27;
+                                                    &#x27;new users&#x27;,
+                                     &#x27;operationId&#x27;: &#x27;getRegistrationForm&#x27;,
+                                     &#x27;parameters&#x27;: [],
+                                     &#x27;requestBody&#x27;: {},
+                                     &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                           &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                          &#x27;response&#x27;}},
+                                     &#x27;security&#x27;: [],
+                                     &#x27;summary&#x27;: &#x27;Registration Form&#x27;,
+                                     &#x27;tags&#x27;: []},
+                             &#x27;parameters&#x27;: [],
+                             &#x27;post&#x27;: {&#x27;deprecated&#x27;: False,
+                                      &#x27;description&#x27;: &#x27;Registers a new user&#x27;,
+                                      &#x27;operationId&#x27;: &#x27;registerUser&#x27;,
+                                      &#x27;parameters&#x27;: [],
+                                      &#x27;requestBody&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/UserRegistration&#x27;}},
+                                                                  &#x27;application/x-www-form-urlencoded&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/UserRegistration&#x27;}}},
+                                                      &#x27;required&#x27;: True},
+                                      &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;properties&#x27;: {&#x27;message&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                       &#x27;username&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}},
+                                                                                                        &#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                        &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                            &#x27;description&#x27;: &#x27;User &#x27;
+                                                                           &#x27;successfully &#x27;
+                                                                           &#x27;registered&#x27;},
+                                                    &#x27;400&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                            &#x27;description&#x27;: &#x27;Invalid &#x27;
+                                                                           &#x27;request&#x27;},
+                                                    &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                            &#x27;description&#x27;: &#x27;Server &#x27;
+                                                                           &#x27;error&#x27;}},
+                                      &#x27;security&#x27;: [],
+                                      &#x27;summary&#x27;: &#x27;Register User&#x27;,
+                                      &#x27;tags&#x27;: []},
+                             &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/user-management&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                    &#x27;parameters&#x27;: [],
+                                    &#x27;summary&#x27;: &#x27;&#x27;}},
+     &#x27;servers&#x27;: [{&#x27;description&#x27;: &#x27;Production server&#x27;,
+                  &#x27;url&#x27;: &#x27;https://portfolio.i7es.click&#x27;,
+                  &#x27;variables&#x27;: {}}]}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.oas30.security.security-object-2">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-2"
+                                                            aria-expanded="false" aria-controls="uid-2"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="https://security.i7es.click/api" target="_blank">example_2_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.oas30.security.security-object-2">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-2">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using https://security.i7es.click/api from examples</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: Additional properties are not allowed (&#x27;components&#x27;, &#x27;externalDocs&#x27;, &#x27;info&#x27;, &#x27;openapi&#x27;, &#x27;paths&#x27;, &#x27;servers&#x27; were unexpected)
+
+Failed validating &#x27;additionalProperties&#x27; in schema:
+    {&#x27;$id&#x27;: &#x27;https://example.com/schemas/definition-ref.schema.json&#x27;,
+     &#x27;$schema&#x27;: &#x27;https://json-schema.org/draft/2020-12/schema&#x27;,
+     &#x27;additionalProperties&#x27;: False,
+     &#x27;examples&#x27;: [{&#x27;definition&#x27;: {&#x27;application/json&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}},
+                  {&#x27;definition&#x27;: {&#x27;application/yaml&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}},
+                  {&#x27;definition&#x27;: {&#x27;application/json&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;,
+                                  &#x27;application/yaml&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}}],
+     &#x27;properties&#x27;: {&#x27;definition&#x27;: {&#x27;additionalProperties&#x27;: False,
+                                   &#x27;anyOf&#x27;: [{&#x27;required&#x27;: [&#x27;application/json&#x27;]},
+                                             {&#x27;required&#x27;: [&#x27;application/yaml&#x27;]}],
+                                   &#x27;description&#x27;: &#x27;Media-type keyed &#x27;
+                                                  &#x27;locations of the API &#x27;
+                                                  &#x27;definition.&#x27;,
+                                   &#x27;properties&#x27;: {&#x27;application/json&#x27;: {&#x27;description&#x27;: &#x27;Absolute &#x27;
+                                                                                      &#x27;URI &#x27;
+                                                                                      &#x27;to &#x27;
+                                                                                      &#x27;the &#x27;
+                                                                                      &#x27;OpenAPI &#x27;
+                                                                                      &#x27;definition &#x27;
+                                                                                      &#x27;in &#x27;
+                                                                                      &#x27;JSON &#x27;
+                                                                                      &#x27;form.&#x27;,
+                                                                       &#x27;format&#x27;: &#x27;uri&#x27;,
+                                                                       &#x27;type&#x27;: &#x27;string&#x27;},
+                                                  &#x27;application/yaml&#x27;: {&#x27;description&#x27;: &#x27;Absolute &#x27;
+                                                                                      &#x27;URI &#x27;
+                                                                                      &#x27;to &#x27;
+                                                                                      &#x27;the &#x27;
+                                                                                      &#x27;OpenAPI &#x27;
+                                                                                      &#x27;definition &#x27;
+                                                                                      &#x27;in &#x27;
+                                                                                      &#x27;YAML &#x27;
+                                                                                      &#x27;form.&#x27;,
+                                                                       &#x27;format&#x27;: &#x27;uri&#x27;,
+                                                                       &#x27;type&#x27;: &#x27;string&#x27;}},
+                                   &#x27;type&#x27;: &#x27;object&#x27;}},
+     &#x27;required&#x27;: [&#x27;definition&#x27;],
+     &#x27;title&#x27;: &#x27;API Definition Locations&#x27;,
+     &#x27;type&#x27;: &#x27;object&#x27;}
+
+On instance:
+    {&#x27;components&#x27;: {&#x27;parameters&#x27;: {},
+                    &#x27;responses&#x27;: {},
+                    &#x27;schemas&#x27;: {},
+                    &#x27;securitySchemes&#x27;: {&#x27;basicAuth&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                     &#x27;authentication &#x27;
+                                                                     &#x27;with &#x27;
+                                                                     &#x27;username &#x27;
+                                                                     &#x27;and &#x27;
+                                                                     &#x27;password&#x27;,
+                                                      &#x27;scheme&#x27;: &#x27;basic&#x27;,
+                                                      &#x27;type&#x27;: &#x27;http&#x27;}}},
+     &#x27;externalDocs&#x27;: {},
+     &#x27;info&#x27;: {&#x27;contact&#x27;: {&#x27;email&#x27;: &#x27;support@leedahl.com&#x27;,
+                          &#x27;name&#x27;: &#x27;Development Support&#x27;,
+                          &#x27;url&#x27;: &#x27;https://github.com/leedahl&#x27;},
+              &#x27;description&#x27;: &#x27;Security services for APIs, including user &#x27;
+                             &#x27;registration and management.&#x27;,
+              &#x27;license&#x27;: {},
+              &#x27;termsOfService&#x27;: &#x27;&#x27;,
+              &#x27;title&#x27;: &#x27;My API Security Service&#x27;,
+              &#x27;version&#x27;: &#x27;1.0.0&#x27;},
+     &#x27;openapi&#x27;: &#x27;3.0.0&#x27;,
+     &#x27;paths&#x27;: {&#x27;/&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                     &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                             &#x27;description&#x27;: &#x27;Returns the API home page &#x27;
+                                            &#x27;with documentation links&#x27;,
+                             &#x27;operationId&#x27;: &#x27;getHomePage&#x27;,
+                             &#x27;parameters&#x27;: [],
+                             &#x27;requestBody&#x27;: {},
+                             &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                   &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                  &#x27;response&#x27;}},
+                             &#x27;security&#x27;: [],
+                             &#x27;summary&#x27;: &#x27;API Home Page&#x27;,
+                             &#x27;tags&#x27;: []},
+                     &#x27;parameters&#x27;: [],
+                     &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/.well-known/{well_known_name}&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                                  &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                                          &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                                         &#x27;a &#x27;
+                                                                         &#x27;specific &#x27;
+                                                                         &#x27;well-known &#x27;
+                                                                         &#x27;resource&#x27;,
+                                                          &#x27;operationId&#x27;: &#x27;getWellKnownResource&#x27;,
+                                                          &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;Name &#x27;
+                                                                                         &#x27;of &#x27;
+                                                                                         &#x27;the &#x27;
+                                                                                         &#x27;well-known &#x27;
+                                                                                         &#x27;resource&#x27;,
+                                                                          &#x27;in&#x27;: &#x27;path&#x27;,
+                                                                          &#x27;name&#x27;: &#x27;well_known_name&#x27;,
+                                                                          &#x27;required&#x27;: True,
+                                                                          &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}],
+                                                          &#x27;requestBody&#x27;: {},
+                                                          &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                                &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                                               &#x27;response&#x27;}},
+                                                          &#x27;security&#x27;: [],
+                                                          &#x27;summary&#x27;: &#x27;Well-Known &#x27;
+                                                                     &#x27;Resource&#x27;,
+                                                          &#x27;tags&#x27;: []},
+                                                  &#x27;parameters&#x27;: [],
+                                                  &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/api&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                        &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                &#x27;description&#x27;: &#x27;Returns information about &#x27;
+                                               &#x27;the API&#x27;,
+                                &#x27;operationId&#x27;: &#x27;getApiInfo&#x27;,
+                                &#x27;parameters&#x27;: [],
+                                &#x27;requestBody&#x27;: {},
+                                &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                      &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                     &#x27;response&#x27;}},
+                                &#x27;security&#x27;: [],
+                                &#x27;summary&#x27;: &#x27;API Information&#x27;,
+                                &#x27;tags&#x27;: []},
+                        &#x27;parameters&#x27;: [],
+                        &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/conformance&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                        &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                       &#x27;information about &#x27;
+                                                       &#x27;API conformance&#x27;,
+                                        &#x27;operationId&#x27;: &#x27;getConformance&#x27;,
+                                        &#x27;parameters&#x27;: [],
+                                        &#x27;requestBody&#x27;: {},
+                                        &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                              &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                             &#x27;response&#x27;}},
+                                        &#x27;security&#x27;: [],
+                                        &#x27;summary&#x27;: &#x27;API Conformance&#x27;,
+                                        &#x27;tags&#x27;: []},
+                                &#x27;parameters&#x27;: [],
+                                &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/conformance/{conformance_alias}&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                                    &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                                            &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                                           &#x27;information &#x27;
+                                                                           &#x27;about &#x27;
+                                                                           &#x27;a &#x27;
+                                                                           &#x27;specific &#x27;
+                                                                           &#x27;API &#x27;
+                                                                           &#x27;conformance &#x27;
+                                                                           &#x27;alias&#x27;,
+                                                            &#x27;operationId&#x27;: &#x27;getConformanceAlias&#x27;,
+                                                            &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;Conformance &#x27;
+                                                                                           &#x27;alias &#x27;
+                                                                                           &#x27;name&#x27;,
+                                                                            &#x27;in&#x27;: &#x27;path&#x27;,
+                                                                            &#x27;name&#x27;: &#x27;conformance_alias&#x27;,
+                                                                            &#x27;required&#x27;: True,
+                                                                            &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}],
+                                                            &#x27;requestBody&#x27;: {},
+                                                            &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                                  &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                                                 &#x27;response&#x27;}},
+                                                            &#x27;security&#x27;: [],
+                                                            &#x27;summary&#x27;: &#x27;API &#x27;
+                                                                       &#x27;Conformance &#x27;
+                                                                       &#x27;Alias&#x27;,
+                                                            &#x27;tags&#x27;: []},
+                                                    &#x27;parameters&#x27;: [],
+                                                    &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/documentation&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                  &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                          &#x27;description&#x27;: &#x27;Returns API &#x27;
+                                                         &#x27;documentation&#x27;,
+                                          &#x27;operationId&#x27;: &#x27;getDocumentation&#x27;,
+                                          &#x27;parameters&#x27;: [],
+                                          &#x27;requestBody&#x27;: {},
+                                          &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                               &#x27;response&#x27;}},
+                                          &#x27;security&#x27;: [],
+                                          &#x27;summary&#x27;: &#x27;API Documentation&#x27;,
+                                          &#x27;tags&#x27;: []},
+                                  &#x27;parameters&#x27;: [],
+                                  &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/index.html&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                               &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                       &#x27;description&#x27;: &#x27;Returns the API &#x27;
+                                                      &#x27;home page with &#x27;
+                                                      &#x27;documentation links&#x27;,
+                                       &#x27;operationId&#x27;: &#x27;getIndexPage&#x27;,
+                                       &#x27;parameters&#x27;: [],
+                                       &#x27;requestBody&#x27;: {},
+                                       &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                             &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                            &#x27;response&#x27;}},
+                                       &#x27;security&#x27;: [],
+                                       &#x27;summary&#x27;: &#x27;API Home Page &#x27;
+                                                  &#x27;(index.html)&#x27;,
+                                       &#x27;tags&#x27;: []},
+                               &#x27;parameters&#x27;: [],
+                               &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/register&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                             &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                     &#x27;description&#x27;: &#x27;Returns a &#x27;
+                                                    &#x27;registration form for &#x27;
+                                                    &#x27;new users&#x27;,
+                                     &#x27;operationId&#x27;: &#x27;getRegistrationForm&#x27;,
+                                     &#x27;parameters&#x27;: [],
+                                     &#x27;requestBody&#x27;: {},
+                                     &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                           &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                          &#x27;response&#x27;}},
+                                     &#x27;security&#x27;: [],
+                                     &#x27;summary&#x27;: &#x27;Registration Form&#x27;,
+                                     &#x27;tags&#x27;: []},
+                             &#x27;parameters&#x27;: [],
+                             &#x27;post&#x27;: {&#x27;deprecated&#x27;: False,
+                                      &#x27;description&#x27;: &#x27;Registers a new user&#x27;,
+                                      &#x27;operationId&#x27;: &#x27;registerUser&#x27;,
+                                      &#x27;parameters&#x27;: [],
+                                      &#x27;requestBody&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/UserRegistration&#x27;}},
+                                                                  &#x27;application/x-www-form-urlencoded&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/UserRegistration&#x27;}}},
+                                                      &#x27;required&#x27;: True},
+                                      &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;properties&#x27;: {&#x27;message&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                       &#x27;username&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}},
+                                                                                                        &#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                        &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                            &#x27;description&#x27;: &#x27;User &#x27;
+                                                                           &#x27;successfully &#x27;
+                                                                           &#x27;registered&#x27;},
+                                                    &#x27;400&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                            &#x27;description&#x27;: &#x27;Invalid &#x27;
+                                                                           &#x27;request&#x27;},
+                                                    &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                            &#x27;description&#x27;: &#x27;Server &#x27;
+                                                                           &#x27;error&#x27;}},
+                                      &#x27;security&#x27;: [],
+                                      &#x27;summary&#x27;: &#x27;Register User&#x27;,
+                                      &#x27;tags&#x27;: []},
+                             &#x27;summary&#x27;: &#x27;&#x27;},
+               &#x27;/user-management&#x27;: {&#x27;description&#x27;: &#x27;&#x27;,
+                                    &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                            &#x27;description&#x27;: &#x27;Returns a form &#x27;
+                                                           &#x27;for user &#x27;
+                                                           &#x27;management &#x27;
+                                                           &#x27;(password &#x27;
+                                                           &#x27;change)&#x27;,
+                                            &#x27;operationId&#x27;: &#x27;getUserManagementForm&#x27;,
+                                            &#x27;parameters&#x27;: [],
+                                            &#x27;requestBody&#x27;: {},
+                                            &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                  &#x27;description&#x27;: &#x27;User &#x27;
+                                                                                 &#x27;management &#x27;
+                                                                                 &#x27;form&#x27;},
+                                                          &#x27;401&#x27;: {&#x27;description&#x27;: &#x27;Unauthorized&#x27;,
+                                                                  &#x27;headers&#x27;: {&#x27;WWW-Authenticate&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                                                                  &#x27;authentication &#x27;
+                                                                                                                  &#x27;challenge&#x27;,
+                                                                                                   &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}}}},
+                                            &#x27;security&#x27;: [{&#x27;basicAuth&#x27;: []}],
+                                            &#x27;summary&#x27;: &#x27;User Management &#x27;
+                                                       &#x27;Form&#x27;,
+                                            &#x27;tags&#x27;: []},
+                                    &#x27;parameters&#x27;: [],
+                                    &#x27;post&#x27;: {&#x27;deprecated&#x27;: False,
+                                             &#x27;description&#x27;: &#x27;Updates user &#x27;
+                                                            &#x27;information &#x27;
+                                                            &#x27;(currently &#x27;
+                                                            &#x27;only password &#x27;
+                                                            &#x27;changes)&#x27;,
+                                             &#x27;operationId&#x27;: &#x27;updateUser&#x27;,
+                                             &#x27;parameters&#x27;: [],
+                                             &#x27;requestBody&#x27;: {&#x27;content&#x27;: {&#x27;application/x-www-form-urlencoded&#x27;: {&#x27;schema&#x27;: {&#x27;properties&#x27;: {&#x27;confirm_password&#x27;: {&#x27;description&#x27;: &#x27;Confirmation &#x27;
+                                                                                                                                                                             &#x27;of &#x27;
+                                                                                                                                                                             &#x27;new &#x27;
+                                                                                                                                                                             &#x27;password&#x27;,
+                                                                                                                                                              &#x27;format&#x27;: &#x27;password&#x27;,
+                                                                                                                                                              &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                                         &#x27;password&#x27;: {&#x27;description&#x27;: &quot;User&#x27;s &quot;
+                                                                                                                                                                     &#x27;new &#x27;
+                                                                                                                                                                     &#x27;password&#x27;,
+                                                                                                                                                      &#x27;format&#x27;: &#x27;password&#x27;,
+                                                                                                                                                      &#x27;type&#x27;: &#x27;string&#x27;},
+                                                                                                                                         &#x27;username&#x27;: {&#x27;description&#x27;: &quot;User&#x27;s &quot;
+                                                                                                                                                                     &#x27;username&#x27;,
+                                                                                                                                                      &#x27;type&#x27;: &#x27;string&#x27;}},
+                                                                                                                          &#x27;required&#x27;: [&#x27;username&#x27;,
+                                                                                                                                       &#x27;password&#x27;,
+                                                                                                                                       &#x27;confirm_password&#x27;],
+                                                                                                                          &#x27;type&#x27;: &#x27;object&#x27;}}},
+                                                             &#x27;required&#x27;: True},
+                                             &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                   &#x27;description&#x27;: &#x27;User &#x27;
+                                                                                  &#x27;information &#x27;
+                                                                                  &#x27;successfully &#x27;
+                                                                                  &#x27;updated&#x27;},
+                                                           &#x27;401&#x27;: {&#x27;description&#x27;: &#x27;Unauthorized&#x27;,
+                                                                   &#x27;headers&#x27;: {&#x27;WWW-Authenticate&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                                                                   &#x27;authentication &#x27;
+                                                                                                                   &#x27;challenge&#x27;,
+                                                                                                    &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}}},
+                                                           &#x27;404&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                   &#x27;description&#x27;: &#x27;User &#x27;
+                                                                                  &#x27;not &#x27;
+                                                                                  &#x27;found&#x27;}},
+                                             &#x27;security&#x27;: [{&#x27;basicAuth&#x27;: []}],
+                                             &#x27;summary&#x27;: &#x27;Update User&#x27;,
+                                             &#x27;tags&#x27;: []},
+                                    &#x27;summary&#x27;: &#x27;&#x27;}},
+     &#x27;servers&#x27;: [{&#x27;description&#x27;: &#x27;Production server&#x27;,
+                  &#x27;url&#x27;: &#x27;https://security.i7es.click&#x27;,
+                  &#x27;variables&#x27;: {}}]}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item " id="item-ogc.oas30.security.security-object-3">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0 anchor-container">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-3"
+                                                            aria-expanded="false" aria-controls="uid-3"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="https://greeting.i7es.click/api" target="_blank">example_3_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.oas30.security.security-object-3">¶</a>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-3">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using https://greeting.i7es.click/api from examples</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: Additional properties are not allowed (&#x27;components&#x27;, &#x27;externalDocs&#x27;, &#x27;info&#x27;, &#x27;openapi&#x27;, &#x27;paths&#x27;, &#x27;servers&#x27; were unexpected)
+
+Failed validating &#x27;additionalProperties&#x27; in schema:
+    {&#x27;$id&#x27;: &#x27;https://example.com/schemas/definition-ref.schema.json&#x27;,
+     &#x27;$schema&#x27;: &#x27;https://json-schema.org/draft/2020-12/schema&#x27;,
+     &#x27;additionalProperties&#x27;: False,
+     &#x27;examples&#x27;: [{&#x27;definition&#x27;: {&#x27;application/json&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}},
+                  {&#x27;definition&#x27;: {&#x27;application/yaml&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}},
+                  {&#x27;definition&#x27;: {&#x27;application/json&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;,
+                                  &#x27;application/yaml&#x27;: &#x27;https://myapiserver.com/oaslocation&#x27;}}],
+     &#x27;properties&#x27;: {&#x27;definition&#x27;: {&#x27;additionalProperties&#x27;: False,
+                                   &#x27;anyOf&#x27;: [{&#x27;required&#x27;: [&#x27;application/json&#x27;]},
+                                             {&#x27;required&#x27;: [&#x27;application/yaml&#x27;]}],
+                                   &#x27;description&#x27;: &#x27;Media-type keyed &#x27;
+                                                  &#x27;locations of the API &#x27;
+                                                  &#x27;definition.&#x27;,
+                                   &#x27;properties&#x27;: {&#x27;application/json&#x27;: {&#x27;description&#x27;: &#x27;Absolute &#x27;
+                                                                                      &#x27;URI &#x27;
+                                                                                      &#x27;to &#x27;
+                                                                                      &#x27;the &#x27;
+                                                                                      &#x27;OpenAPI &#x27;
+                                                                                      &#x27;definition &#x27;
+                                                                                      &#x27;in &#x27;
+                                                                                      &#x27;JSON &#x27;
+                                                                                      &#x27;form.&#x27;,
+                                                                       &#x27;format&#x27;: &#x27;uri&#x27;,
+                                                                       &#x27;type&#x27;: &#x27;string&#x27;},
+                                                  &#x27;application/yaml&#x27;: {&#x27;description&#x27;: &#x27;Absolute &#x27;
+                                                                                      &#x27;URI &#x27;
+                                                                                      &#x27;to &#x27;
+                                                                                      &#x27;the &#x27;
+                                                                                      &#x27;OpenAPI &#x27;
+                                                                                      &#x27;definition &#x27;
+                                                                                      &#x27;in &#x27;
+                                                                                      &#x27;YAML &#x27;
+                                                                                      &#x27;form.&#x27;,
+                                                                       &#x27;format&#x27;: &#x27;uri&#x27;,
+                                                                       &#x27;type&#x27;: &#x27;string&#x27;}},
+                                   &#x27;type&#x27;: &#x27;object&#x27;}},
+     &#x27;required&#x27;: [&#x27;definition&#x27;],
+     &#x27;title&#x27;: &#x27;API Definition Locations&#x27;,
+     &#x27;type&#x27;: &#x27;object&#x27;}
+
+On instance:
+    {&#x27;components&#x27;: {&#x27;parameters&#x27;: {},
+                    &#x27;responses&#x27;: {},
+                    &#x27;schemas&#x27;: {&#x27;Error&#x27;: {&#x27;properties&#x27;: {&#x27;detail&#x27;: {&#x27;description&#x27;: &#x27;A &#x27;
+                                                                                   &#x27;human-readable &#x27;
+                                                                                   &#x27;explanation &#x27;
+                                                                                   &#x27;specific &#x27;
+                                                                                   &#x27;to &#x27;
+                                                                                   &#x27;this &#x27;
+                                                                                   &#x27;occurrence &#x27;
+                                                                                   &#x27;of &#x27;
+                                                                                   &#x27;the &#x27;
+                                                                                   &#x27;problem&#x27;,
+                                                                    &#x27;example&#x27;: &#x27;Error &#x27;
+                                                                               &#x27;invoking &#x27;
+                                                                               &#x27;target &#x27;
+                                                                               &#x27;function&#x27;,
+                                                                    &#x27;type&#x27;: &#x27;string&#x27;},
+                                                         &#x27;title&#x27;: {&#x27;description&#x27;: &#x27;A &#x27;
+                                                                                  &#x27;short, &#x27;
+                                                                                  &#x27;human-readable &#x27;
+                                                                                  &#x27;summary &#x27;
+                                                                                  &#x27;of &#x27;
+                                                                                  &#x27;the &#x27;
+                                                                                  &#x27;problem &#x27;
+                                                                                  &#x27;type&#x27;,
+                                                                   &#x27;example&#x27;: &#x27;Internal &#x27;
+                                                                              &#x27;Server &#x27;
+                                                                              &#x27;Error&#x27;,
+                                                                   &#x27;type&#x27;: &#x27;string&#x27;},
+                                                         &#x27;type&#x27;: {&#x27;description&#x27;: &#x27;A &#x27;
+                                                                                 &#x27;URI &#x27;
+                                                                                 &#x27;reference &#x27;
+                                                                                 &#x27;that &#x27;
+                                                                                 &#x27;identifies &#x27;
+                                                                                 &#x27;the &#x27;
+                                                                                 &#x27;problem &#x27;
+                                                                                 &#x27;type&#x27;,
+                                                                  &#x27;example&#x27;: &#x27;about:blank&#x27;,
+                                                                  &#x27;type&#x27;: &#x27;string&#x27;}},
+                                          &#x27;required&#x27;: [&#x27;type&#x27;,
+                                                       &#x27;title&#x27;,
+                                                       &#x27;detail&#x27;],
+                                          &#x27;type&#x27;: &#x27;object&#x27;},
+                                &#x27;Greeting&#x27;: {&#x27;properties&#x27;: {&#x27;greeting&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                        &#x27;greeting &#x27;
+                                                                                        &#x27;message&#x27;,
+                                                                         &#x27;example&#x27;: &#x27;Hello &#x27;
+                                                                                    &#x27;World!&#x27;,
+                                                                         &#x27;type&#x27;: &#x27;string&#x27;}},
+                                             &#x27;required&#x27;: [&#x27;greeting&#x27;],
+                                             &#x27;type&#x27;: &#x27;object&#x27;},
+                                &#x27;GreetingJim&#x27;: {&#x27;properties&#x27;: {&#x27;greeting&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                           &#x27;greeting &#x27;
+                                                                                           &#x27;message&#x27;,
+                                                                            &#x27;example&#x27;: &#x27;Hello &#x27;
+                                                                                       &#x27;Jim!&#x27;,
+                                                                            &#x27;type&#x27;: &#x27;string&#x27;}},
+                                                &#x27;required&#x27;: [&#x27;greeting&#x27;],
+                                                &#x27;type&#x27;: &#x27;object&#x27;},
+                                &#x27;GreetingPoint&#x27;: {&#x27;properties&#x27;: {&#x27;coordinates&#x27;: {&#x27;description&#x27;: &#x27;A &#x27;
+                                                                                                &#x27;set &#x27;
+                                                                                                &#x27;of &#x27;
+                                                                                                &#x27;longitude, &#x27;
+                                                                                                &#x27;latitude &#x27;
+                                                                                                &#x27;coordinate &#x27;
+                                                                                                &#x27;values.&#x27;,
+                                                                                 &#x27;example&#x27;: &#x27;[-113.6246819, &#x27;
+                                                                                            &#x27;37.0891407]&#x27;,
+                                                                                 &#x27;items&#x27;: {&#x27;format&#x27;: &#x27;float&#x27;,
+                                                                                           &#x27;type&#x27;: &#x27;number&#x27;},
+                                                                                 &#x27;type&#x27;: &#x27;array&#x27;},
+                                                                 &#x27;type&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                         &#x27;type &#x27;
+                                                                                         &#x27;of &#x27;
+                                                                                         &#x27;Geometry.&#x27;,
+                                                                          &#x27;enum&#x27;: [&#x27;Point&#x27;],
+                                                                          &#x27;example&#x27;: &#x27;Point&#x27;,
+                                                                          &#x27;type&#x27;: &#x27;string&#x27;}},
+                                                  &#x27;required&#x27;: [&#x27;type&#x27;,
+                                                               &#x27;coordinates&#x27;],
+                                                  &#x27;type&#x27;: &#x27;object&#x27;},
+                                &#x27;GreetingStGeorge&#x27;: {&#x27;properties&#x27;: {&#x27;greeting&#x27;: {&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                                &#x27;greeting &#x27;
+                                                                                                &#x27;message&#x27;,
+                                                                                 &#x27;example&#x27;: &#x27;Hello &#x27;
+                                                                                            &#x27;to &#x27;
+                                                                                            &#x27;the &#x27;
+                                                                                            &#x27;kind &#x27;
+                                                                                            &#x27;people &#x27;
+                                                                                            &#x27;of &#x27;
+                                                                                            &#x27;St. &#x27;
+                                                                                            &#x27;George, &#x27;
+                                                                                            &#x27;Washington &#x27;
+                                                                                            &#x27;County, &#x27;
+                                                                                            &#x27;Utah, &#x27;
+                                                                                            &#x27;United &#x27;
+                                                                                            &#x27;States!&#x27;,
+                                                                                 &#x27;type&#x27;: &#x27;string&#x27;}},
+                                                     &#x27;required&#x27;: [&#x27;greeting&#x27;],
+                                                     &#x27;type&#x27;: &#x27;object&#x27;}},
+                    &#x27;securitySchemes&#x27;: {&#x27;basicAuth&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                     &#x27;authentication &#x27;
+                                                                     &#x27;using &#x27;
+                                                                     &#x27;username &#x27;
+                                                                     &#x27;and &#x27;
+                                                                     &#x27;password&#x27;,
+                                                      &#x27;scheme&#x27;: &#x27;basic&#x27;,
+                                                      &#x27;type&#x27;: &#x27;http&#x27;}}},
+     &#x27;externalDocs&#x27;: {},
+     &#x27;info&#x27;: {&#x27;contact&#x27;: {&#x27;email&#x27;: &#x27;support@leedahl.com&#x27;,
+                          &#x27;name&#x27;: &#x27;Development Support&#x27;,
+                          &#x27;url&#x27;: &#x27;https://github.com/leedahl&#x27;},
+              &#x27;description&#x27;: &#x27;An authentication protected API to &#x27;
+                             &#x27;demonstratate securing an API with a &#x27;
+                             &#x27;Personalized Hello World style Greeting.&#x27;,
+              &#x27;license&#x27;: {&#x27;name&#x27;: &#x27;MIT&#x27;,
+                          &#x27;url&#x27;: &#x27;https://opensource.org/license/mit&#x27;},
+              &#x27;termsOfService&#x27;: &#x27;&#x27;,
+              &#x27;title&#x27;: &#x27;Personalized Hello World Greeting API&#x27;,
+              &#x27;version&#x27;: &#x27;1.0.0&#x27;},
+     &#x27;openapi&#x27;: &#x27;3.0.0&#x27;,
+     &#x27;paths&#x27;: {&#x27;/&#x27;: {&#x27;description&#x27;: &#x27;A landing page for the Personalized &#x27;
+                                    &#x27;Greeting API.&#x27;,
+                     &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                             &#x27;description&#x27;: &#x27;Returns the landing page for &#x27;
+                                            &#x27;the API&#x27;,
+                             &#x27;operationId&#x27;: &#x27;getLandingPage&#x27;,
+                             &#x27;parameters&#x27;: [],
+                             &#x27;requestBody&#x27;: {},
+                             &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;example&#x27;: {&#x27;description&#x27;: &#x27;Contains &#x27;
+                                                                                                                          &#x27;a &#x27;
+                                                                                                                          &#x27;portfolio &#x27;
+                                                                                                                          &#x27;listing &#x27;
+                                                                                                                          &#x27;of &#x27;
+                                                                                                                          &#x27;APIs.&#x27;,
+                                                                                                           &#x27;links&#x27;: [{&#x27;href&#x27;: &#x27;greeting.i7es.click/.well-known/api-catalog&#x27;,
+                                                                                                                      &#x27;rel&#x27;: &#x27;api-catalog&#x27;,
+                                                                                                                      &#x27;title&#x27;: &#x27;Portfolio &#x27;
+                                                                                                                               &#x27;of &#x27;
+                                                                                                                               &#x27;APIs&#x27;,
+                                                                                                                      &#x27;type&#x27;: &#x27;application/linkset+json&#x27;}],
+                                                                                                           &#x27;title&#x27;: &#x27;Portfolio &#x27;
+                                                                                                                    &#x27;of &#x27;
+                                                                                                                    &#x27;APIs&#x27;},
+                                                                                               &#x27;type&#x27;: &#x27;object&#x27;}},
+                                                               &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                   &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                  &#x27;response&#x27;},
+                                           &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                   &#x27;description&#x27;: &#x27;Internal &#x27;
+                                                                  &#x27;server &#x27;
+                                                                  &#x27;error&#x27;}},
+                             &#x27;security&#x27;: [],
+                             &#x27;summary&#x27;: &#x27;Retrive a landing page for the &#x27;
+                                        &#x27;API.  The landing page may return &#x27;
+                                        &#x27;a HTML or JSON body with links to &#x27;
+                                        &#x27;various endpoints of the API.&#x27;,
+                             &#x27;tags&#x27;: []},
+                     &#x27;parameters&#x27;: [],
+                     &#x27;summary&#x27;: &#x27;The JSON/HTML version of a landing page &#x27;
+                                &#x27;containing links to the API &#x27;
+                                &#x27;documentation.&#x27;},
+               &#x27;/.well-known/{well_known_name}&#x27;: {&#x27;description&#x27;: &#x27;Dot &#x27;
+                                                                 &#x27;well-known &#x27;
+                                                                 &#x27;is an &#x27;
+                                                                 &#x27;Internet &#x27;
+                                                                 &#x27;standard &#x27;
+                                                                 &#x27;for &#x27;
+                                                                 &#x27;describing &#x27;
+                                                                 &#x27;common &#x27;
+                                                                 &#x27;things &#x27;
+                                                                 &#x27;on a &#x27;
+                                                                 &#x27;website.&#x27;,
+                                                  &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                                          &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                                         &#x27;specific &#x27;
+                                                                         &#x27;well-known &#x27;
+                                                                         &#x27;information &#x27;
+                                                                         &#x27;about &#x27;
+                                                                         &#x27;the &#x27;
+                                                                         &#x27;API&#x27;,
+                                                          &#x27;operationId&#x27;: &#x27;getSpecificWellKnown&#x27;,
+                                                          &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                         &#x27;name &#x27;
+                                                                                         &#x27;of &#x27;
+                                                                                         &#x27;the &#x27;
+                                                                                         &#x27;well-known &#x27;
+                                                                                         &#x27;information &#x27;
+                                                                                         &#x27;to &#x27;
+                                                                                         &#x27;retrieve.&#x27;,
+                                                                          &#x27;in&#x27;: &#x27;path&#x27;,
+                                                                          &#x27;name&#x27;: &#x27;well_known_name&#x27;,
+                                                                          &#x27;required&#x27;: True,
+                                                                          &#x27;schema&#x27;: {&#x27;example&#x27;: &#x27;api-catalog&#x27;,
+                                                                                     &#x27;type&#x27;: &#x27;string&#x27;}}],
+                                                          &#x27;requestBody&#x27;: {},
+                                                          &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/linkset+json&#x27;: {&#x27;schema&#x27;: {&#x27;example&#x27;: {&#x27;linkset&#x27;: [{&#x27;anchor&#x27;: &#x27;https://greeting.i7es.click&#x27;,
+                                                                                                                                                             &#x27;service-desc&#x27;: {&#x27;href&#x27;: &#x27;https://greeting.i7es.click/api&#x27;,
+                                                                                                                                                                              &#x27;type&#x27;: &#x27;application/vnd.oai.openapi+json;version=3.0&#x27;}}]},
+                                                                                                                                    &#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                                            &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                                &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                                               &#x27;response&#x27;},
+                                                                        &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                                &#x27;description&#x27;: &#x27;Internal &#x27;
+                                                                                               &#x27;server &#x27;
+                                                                                               &#x27;error&#x27;}},
+                                                          &#x27;security&#x27;: [],
+                                                          &#x27;summary&#x27;: &#x27;Some &#x27;
+                                                                     &#x27;URL &#x27;
+                                                                     &#x27;represent &#x27;
+                                                                     &#x27;well &#x27;
+                                                                     &#x27;know &#x27;
+                                                                     &#x27;Internet &#x27;
+                                                                     &#x27;services.  &#x27;
+                                                                     &#x27;Use &#x27;
+                                                                     &#x27;this &#x27;
+                                                                     &#x27;endpoint &#x27;
+                                                                     &#x27;to &#x27;
+                                                                     &#x27;retrieve &#x27;
+                                                                     &#x27;information &#x27;
+                                                                     &#x27;from &#x27;
+                                                                     &#x27;a &#x27;
+                                                                     &#x27;specified &#x27;
+                                                                     &#x27;well-known &#x27;
+                                                                     &#x27;service.&#x27;,
+                                                          &#x27;tags&#x27;: []},
+                                                  &#x27;parameters&#x27;: [],
+                                                  &#x27;summary&#x27;: &#x27;There are &#x27;
+                                                             &#x27;may dot &#x27;
+                                                             &#x27;well-known &#x27;
+                                                             &#x27;specifications &#x27;
+                                                             &#x27;avaliable &#x27;
+                                                             &#x27;and the &#x27;
+                                                             &#x27;well_known_name &#x27;
+                                                             &#x27;path &#x27;
+                                                             &#x27;parameter &#x27;
+                                                             &#x27;should &#x27;
+                                                             &#x27;describe a &#x27;
+                                                             &#x27;specific &#x27;
+                                                             &#x27;specification.  &#x27;
+                                                             &#x27;The &#x27;
+                                                             &#x27;Personalized &#x27;
+                                                             &#x27;Greeting API &#x27;
+                                                             &#x27;is part of a &#x27;
+                                                             &#x27;portfolio of &#x27;
+                                                             &#x27;APIs that &#x27;
+                                                             &#x27;Michael is &#x27;
+                                                             &#x27;putting &#x27;
+                                                             &#x27;together.  &#x27;
+                                                             &#x27;The well &#x27;
+                                                             &#x27;know &#x27;
+                                                             &#x27;location for &#x27;
+                                                             &#x27;api-catalog &#x27;
+                                                             &#x27;is part of &#x27;
+                                                             &#x27;this &#x27;
+                                                             &#x27;demonstration.  &#x27;
+                                                             &#x27;So if you &#x27;
+                                                             &#x27;specify &#x27;
+                                                             &#x27;api-catalog &#x27;
+                                                             &#x27;for the &#x27;
+                                                             &#x27;well_known_name, &#x27;
+                                                             &#x27;you will get &#x27;
+                                                             &#x27;a list of &#x27;
+                                                             &#x27;APIs that &#x27;
+                                                             &#x27;Michael is &#x27;
+                                                             &#x27;developing.&#x27;},
+               &#x27;/api&#x27;: {&#x27;description&#x27;: &#x27;A JSON view of the Personalized &#x27;
+                                       &#x27;Greeting API as document using the &#x27;
+                                       &#x27;OpenAPI Specification version 3.0.&#x27;,
+                        &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                &#x27;description&#x27;: &#x27;Returns information about &#x27;
+                                               &#x27;the API&#x27;,
+                                &#x27;operationId&#x27;: &#x27;getApiInfo&#x27;,
+                                &#x27;parameters&#x27;: [],
+                                &#x27;requestBody&#x27;: {},
+                                &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/vnd.oai.openapi+json;version=3.0&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                  &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                      &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                     &#x27;response&#x27;},
+                                              &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                      &#x27;description&#x27;: &#x27;Internal &#x27;
+                                                                     &#x27;server &#x27;
+                                                                     &#x27;error&#x27;}},
+                                &#x27;security&#x27;: [],
+                                &#x27;summary&#x27;: &#x27;The JSON representation of &#x27;
+                                           &#x27;this document.  The intent is &#x27;
+                                           &#x27;to allow developer tools &#x27;
+                                           &#x27;create code stubs to call the &#x27;
+                                           &#x27;API.&#x27;,
+                                &#x27;tags&#x27;: []},
+                        &#x27;parameters&#x27;: [],
+                        &#x27;summary&#x27;: &quot;The intent of the &#x27;api&#x27; endpoint is to &quot;
+                                   &#x27;provide developers and development &#x27;
+                                   &#x27;tools with a machine-readable &#x27;
+                                   &#x27;description of the API.  The &#x27;
+                                   &#x27;documentation is provided as a JSON &#x27;
+                                   &#x27;document that follows version 3.0 of &#x27;
+                                   &#x27;the OpenAPI Specification.&#x27;},
+               &#x27;/conformance&#x27;: {&#x27;description&#x27;: &#x27;Information about the &#x27;
+                                               &#x27;conformance requirements &#x27;
+                                               &#x27;for the Personalized &#x27;
+                                               &#x27;Greeting API.&#x27;,
+                                &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                        &#x27;description&#x27;: &#x27;Return conformance &#x27;
+                                                       &#x27;information for &#x27;
+                                                       &#x27;the API&#x27;,
+                                        &#x27;operationId&#x27;: &#x27;getConformance&#x27;,
+                                        &#x27;parameters&#x27;: [],
+                                        &#x27;requestBody&#x27;: {},
+                                        &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;example&#x27;: {&#x27;conformsTo&#x27;: [&#x27;http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core&#x27;]},
+                                                                                                          &#x27;type&#x27;: &#x27;object&#x27;}},
+                                                                          &#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                              &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                             &#x27;response&#x27;},
+                                                      &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                              &#x27;description&#x27;: &#x27;Internal &#x27;
+                                                                             &#x27;server &#x27;
+                                                                             &#x27;error&#x27;}},
+                                        &#x27;security&#x27;: [],
+                                        &#x27;summary&#x27;: &#x27;This API conforms to &#x27;
+                                                   &#x27;the OGC API Common &#x27;
+                                                   &#x27;Specification and IETF &#x27;
+                                                   &#x27;RFC for Secuity.  Use &#x27;
+                                                   &#x27;this endpoint to see a &#x27;
+                                                   &#x27;list of supported &#x27;
+                                                   &#x27;conformance classes.&#x27;,
+                                        &#x27;tags&#x27;: []},
+                                &#x27;parameters&#x27;: [],
+                                &#x27;summary&#x27;: &#x27;One of the purposes of this &#x27;
+                                           &#x27;API is to investigate various &#x27;
+                                           &#x27;ways of documenting APIs that &#x27;
+                                           &#x27;conform to requirements &#x27;
+                                           &#x27;published by the Open &#x27;
+                                           &#x27;GeoSpatial Consortium (OGC).  &#x27;
+                                           &#x27;In particular, to describe &#x27;
+                                           &#x27;security controls in an API.  &#x27;
+                                           &#x27;Thus, this endpoint describes &#x27;
+                                           &#x27;a list of requirements.&#x27;},
+               &#x27;/conformance/{conformance_alias}&#x27;: {&#x27;description&#x27;: &#x27;Information &#x27;
+                                                                   &#x27;about &#x27;
+                                                                   &#x27;a &#x27;
+                                                                   &#x27;conformance &#x27;
+                                                                   &#x27;requirement &#x27;
+                                                                   &#x27;for &#x27;
+                                                                   &#x27;the &#x27;
+                                                                   &#x27;Personalized &#x27;
+                                                                   &#x27;Greeting &#x27;
+                                                                   &#x27;API.&#x27;,
+                                                    &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                                            &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                                           &#x27;specific &#x27;
+                                                                           &#x27;conformance &#x27;
+                                                                           &#x27;information &#x27;
+                                                                           &#x27;for &#x27;
+                                                                           &#x27;the &#x27;
+                                                                           &#x27;API&#x27;,
+                                                            &#x27;operationId&#x27;: &#x27;getSpecificConformance&#x27;,
+                                                            &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;The &#x27;
+                                                                                           &#x27;alias &#x27;
+                                                                                           &#x27;of &#x27;
+                                                                                           &#x27;the &#x27;
+                                                                                           &#x27;conformance &#x27;
+                                                                                           &#x27;information &#x27;
+                                                                                           &#x27;to &#x27;
+                                                                                           &#x27;retrieve&#x27;,
+                                                                            &#x27;in&#x27;: &#x27;path&#x27;,
+                                                                            &#x27;name&#x27;: &#x27;conformance_alias&#x27;,
+                                                                            &#x27;required&#x27;: True,
+                                                                            &#x27;schema&#x27;: {&#x27;example&#x27;: &#x27;core&#x27;,
+                                                                                       &#x27;type&#x27;: &#x27;string&#x27;}}],
+                                                            &#x27;requestBody&#x27;: {},
+                                                            &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                                  &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                                                 &#x27;response&#x27;},
+                                                                          &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                                  &#x27;description&#x27;: &#x27;Internal &#x27;
+                                                                                                 &#x27;server &#x27;
+                                                                                                 &#x27;error&#x27;}},
+                                                            &#x27;security&#x27;: [],
+                                                            &#x27;summary&#x27;: &#x27;Use &#x27;
+                                                                       &#x27;this &#x27;
+                                                                       &#x27;endpoint &#x27;
+                                                                       &#x27;to &#x27;
+                                                                       &#x27;retrieve &#x27;
+                                                                       &#x27;information &#x27;
+                                                                       &#x27;about &#x27;
+                                                                       &#x27;a &#x27;
+                                                                       &#x27;specific &#x27;
+                                                                       &#x27;conformance &#x27;
+                                                                       &#x27;class &#x27;
+                                                                       &#x27;the &#x27;
+                                                                       &#x27;API &#x27;
+                                                                       &#x27;supports.&#x27;,
+                                                            &#x27;tags&#x27;: []},
+                                                    &#x27;parameters&#x27;: [],
+                                                    &#x27;summary&#x27;: &#x27;One of the &#x27;
+                                                               &#x27;purposes &#x27;
+                                                               &#x27;of this &#x27;
+                                                               &#x27;API is to &#x27;
+                                                               &#x27;investigate &#x27;
+                                                               &#x27;various &#x27;
+                                                               &#x27;ways of &#x27;
+                                                               &#x27;documenting &#x27;
+                                                               &#x27;APIs that &#x27;
+                                                               &#x27;conform to &#x27;
+                                                               &#x27;requirements &#x27;
+                                                               &#x27;published &#x27;
+                                                               &#x27;by the &#x27;
+                                                               &#x27;Open &#x27;
+                                                               &#x27;GeoSpatial &#x27;
+                                                               &#x27;Consortium &#x27;
+                                                               &#x27;(OGC).  In &#x27;
+                                                               &#x27;particular, &#x27;
+                                                               &#x27;to &#x27;
+                                                               &#x27;describe &#x27;
+                                                               &#x27;security &#x27;
+                                                               &#x27;controls &#x27;
+                                                               &#x27;in an &#x27;
+                                                               &#x27;API.  &#x27;
+                                                               &#x27;Thus, this &#x27;
+                                                               &#x27;endpoint &#x27;
+                                                               &#x27;describes &#x27;
+                                                               &#x27;a list of &#x27;
+                                                               &#x27;requirements, &#x27;
+                                                               &#x27;when the &#x27;
+                                                               &#x27;conformance_alias &#x27;
+                                                               &#x27;is not &#x27;
+                                                               &#x27;specified, &#x27;
+                                                               &#x27;or a &#x27;
+                                                               &#x27;particular &#x27;
+                                                               &#x27;conformance &#x27;
+                                                               &#x27;requirement, &#x27;
+                                                               &#x27;when the &#x27;
+                                                               &#x27;conformance_alias &#x27;
+                                                               &#x27;is &#x27;
+                                                               &#x27;specified.  &#x27;},
+               &#x27;/documentation&#x27;: {&#x27;description&#x27;: &#x27;The HTML view of the &#x27;
+                                                 &#x27;methods and properties &#x27;
+                                                 &#x27;for the Personalized &#x27;
+                                                 &#x27;Greeting API.&#x27;,
+                                  &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                          &#x27;description&#x27;: &#x27;Returns &#x27;
+                                                         &#x27;documentation &#x27;
+                                                         &#x27;for the API&#x27;,
+                                          &#x27;operationId&#x27;: &#x27;getApiDocumentation&#x27;,
+                                          &#x27;parameters&#x27;: [],
+                                          &#x27;requestBody&#x27;: {},
+                                          &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                                &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                               &#x27;response&#x27;},
+                                                        &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                                &#x27;description&#x27;: &#x27;Internal &#x27;
+                                                                               &#x27;server &#x27;
+                                                                               &#x27;error&#x27;}},
+                                          &#x27;security&#x27;: [],
+                                          &#x27;summary&#x27;: &#x27;The HTML &#x27;
+                                                     &#x27;representation of &#x27;
+                                                     &#x27;this document.  The &#x27;
+                                                     &#x27;intent is to allow &#x27;
+                                                     &#x27;developers to learn &#x27;
+                                                     &#x27;about the API and &#x27;
+                                                     &#x27;experiment with the &#x27;
+                                                     &#x27;use of the API.&#x27;,
+                                          &#x27;tags&#x27;: []},
+                                  &#x27;parameters&#x27;: [],
+                                  &#x27;summary&#x27;: &#x27;The intent of the &#x27;
+                                             &#x27;documentation endpoint is to &#x27;
+                                             &#x27;generate documentations from &#x27;
+                                             &#x27;the content of an OpenAPI &#x27;
+                                             &#x27;document.  The objective is &#x27;
+                                             &#x27;for developers to understand &#x27;
+                                             &#x27;and experiment with creating &#x27;
+                                             &#x27;authenticated personalized &#x27;
+                                             &#x27;greetings.&#x27;},
+               &#x27;/index.html&#x27;: {&#x27;description&#x27;: &#x27;A landing page for the &#x27;
+                                              &#x27;Personalized Greeting API.&#x27;,
+                               &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                       &#x27;description&#x27;: &#x27;Returns the HTML &#x27;
+                                                      &#x27;homepage for the &#x27;
+                                                      &#x27;API&#x27;,
+                                       &#x27;operationId&#x27;: &#x27;getHomepage&#x27;,
+                                       &#x27;parameters&#x27;: [],
+                                       &#x27;requestBody&#x27;: {},
+                                       &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;text/html&#x27;: {&#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}},
+                                                             &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                            &#x27;response&#x27;},
+                                                     &#x27;500&#x27;: {&#x27;content&#x27;: {&#x27;application/problem+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Error&#x27;}}},
+                                                             &#x27;description&#x27;: &#x27;Internal &#x27;
+                                                                            &#x27;server &#x27;
+                                                                            &#x27;error&#x27;}},
+                                       &#x27;security&#x27;: [],
+                                       &#x27;summary&#x27;: &#x27;The HTML representation &#x27;
+                                                  &#x27;of the Personalized &#x27;
+                                                  &#x27;Greeting API Landing &#x27;
+                                                  &#x27;Page.  The page &#x27;
+                                                  &#x27;contains information &#x27;
+                                                  &#x27;about the API.&#x27;,
+                                       &#x27;tags&#x27;: []},
+                               &#x27;parameters&#x27;: [],
+                               &#x27;summary&#x27;: &#x27;An HTML version of a landing &#x27;
+                                          &#x27;page containing links to the &#x27;
+                                          &#x27;API documentation.&#x27;},
+               &#x27;/retrieve&#x27;: {&#x27;description&#x27;: &#x27;A Hello World or Geographic &#x27;
+                                            &#x27;greeting depending on if the &#x27;
+                                            &#x27;request is GET or POST &#x27;
+                                            &#x27;operation.&#x27;,
+                             &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                     &#x27;description&#x27;: &#x27;Returns a default &#x27;
+                                                    &#x27;greeting message&#x27;,
+                                     &#x27;operationId&#x27;: &#x27;getDefaultGreeting&#x27;,
+                                     &#x27;parameters&#x27;: [],
+                                     &#x27;requestBody&#x27;: {},
+                                     &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/Greeting&#x27;}}},
+                                                           &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                          &#x27;response&#x27;},
+                                                   &#x27;401&#x27;: {&#x27;description&#x27;: &#x27;Unauthorized&#x27;,
+                                                           &#x27;headers&#x27;: {&#x27;WWW-Authenticate&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                                                           &#x27;authentication &#x27;
+                                                                                                           &#x27;challenge&#x27;,
+                                                                                            &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}}},
+                                                   &#x27;403&#x27;: {&#x27;description&#x27;: &#x27;Forbidden&#x27;}},
+                                     &#x27;security&#x27;: [{&#x27;basicAuth&#x27;: []}],
+                                     &#x27;summary&#x27;: &#x27;Retrieve a Hello World &#x27;
+                                                &#x27;greeting response.  The &#x27;
+                                                &#x27;retrieve method &#x27;
+                                                &#x27;demonstratates the use of &#x27;
+                                                &#x27;Basic Authentication to &#x27;
+                                                &#x27;access a protected API.&#x27;,
+                                     &#x27;tags&#x27;: []},
+                             &#x27;parameters&#x27;: [],
+                             &#x27;post&#x27;: {&#x27;deprecated&#x27;: False,
+                                      &#x27;description&#x27;: &#x27;Returns a greeting &#x27;
+                                                     &#x27;based on a specified &#x27;
+                                                     &#x27;location&#x27;,
+                                      &#x27;operationId&#x27;: &#x27;getLocationGreeting&#x27;,
+                                      &#x27;parameters&#x27;: [],
+                                      &#x27;requestBody&#x27;: {&#x27;content&#x27;: {&#x27;application/geo+json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/GreetingPoint&#x27;}}},
+                                                      &#x27;description&#x27;: &#x27;A &#x27;
+                                                                     &#x27;GeoJSON &#x27;
+                                                                     &#x27;Point &#x27;
+                                                                     &#x27;Geometry.&#x27;,
+                                                      &#x27;required&#x27;: True},
+                                      &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/GreetingStGeorge&#x27;}}},
+                                                            &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                           &#x27;response&#x27;},
+                                                    &#x27;401&#x27;: {&#x27;description&#x27;: &#x27;Unauthorized&#x27;,
+                                                            &#x27;headers&#x27;: {&#x27;WWW-Authenticate&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                                                            &#x27;authentication &#x27;
+                                                                                                            &#x27;challenge&#x27;,
+                                                                                             &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}}},
+                                                    &#x27;403&#x27;: {&#x27;description&#x27;: &#x27;Forbidden&#x27;}},
+                                      &#x27;security&#x27;: [{&#x27;basicAuth&#x27;: []}],
+                                      &#x27;summary&#x27;: &#x27;Retrieve a Geographic &#x27;
+                                                 &#x27;Location based &#x27;
+                                                 &#x27;greeting.  The retrieve &#x27;
+                                                 &#x27;method demonstratates &#x27;
+                                                 &#x27;the use of Basic &#x27;
+                                                 &#x27;Authentication to access &#x27;
+                                                 &#x27;a protected API.&#x27;,
+                                      &#x27;tags&#x27;: []},
+                             &#x27;summary&#x27;: &#x27;An authorized user may use this &#x27;
+                                        &#x27;endpoint to retrieve a JSON &#x27;
+                                        &#x27;greeting to the World with a GET &#x27;
+                                        &#x27;method.  An authorized user may &#x27;
+                                        &#x27;also use this endpoint to &#x27;
+                                        &#x27;retrieve a JSON greeting base on &#x27;
+                                        &#x27;a Geographic location they &#x27;
+                                        &#x27;provide.  The endpoint is &#x27;
+                                        &#x27;protected with Basic &#x27;
+                                        &#x27;Authentication.  You can register &#x27;
+                                        &#x27;a new user account at &#x27;
+                                        &#x27;https://security.i7es.click/register.  &#x27;
+                                        &#x27;Everyone is free to sign up.  The &#x27;
+                                        &#x27;code is available on GitHub at  &#x27;
+                                        &#x27;https://github.com/leedahl/OGC_LandingPage &#x27;
+                                        &#x27;with an Open Source MIT license.&#x27;},
+               &#x27;/retrieve/{name}&#x27;: {&#x27;description&#x27;: &#x27;A Personalized Hello &#x27;
+                                                   &#x27;World style greeting &#x27;
+                                                   &#x27;that greets the name &#x27;
+                                                   &#x27;specified in the &#x27;
+                                                   &#x27;{name} paath &#x27;
+                                                   &#x27;parameter.&#x27;,
+                                    &#x27;get&#x27;: {&#x27;deprecated&#x27;: False,
+                                            &#x27;description&#x27;: &#x27;Returns a &#x27;
+                                                           &#x27;personalized &#x27;
+                                                           &#x27;greeting &#x27;
+                                                           &#x27;message for &#x27;
+                                                           &#x27;the specified &#x27;
+                                                           &#x27;name&#x27;,
+                                            &#x27;operationId&#x27;: &#x27;getPersonalizedGreeting&#x27;,
+                                            &#x27;parameters&#x27;: [{&#x27;description&#x27;: &#x27;The &#x27;
+                                                                           &#x27;name &#x27;
+                                                                           &#x27;to &#x27;
+                                                                           &#x27;include &#x27;
+                                                                           &#x27;in &#x27;
+                                                                           &#x27;the &#x27;
+                                                                           &#x27;greeting&#x27;,
+                                                            &#x27;in&#x27;: &#x27;path&#x27;,
+                                                            &#x27;name&#x27;: &#x27;name&#x27;,
+                                                            &#x27;required&#x27;: False,
+                                                            &#x27;schema&#x27;: {&#x27;example&#x27;: &#x27;Jim&#x27;,
+                                                                       &#x27;type&#x27;: &#x27;string&#x27;}}],
+                                            &#x27;requestBody&#x27;: {},
+                                            &#x27;responses&#x27;: {&#x27;200&#x27;: {&#x27;content&#x27;: {&#x27;application/json&#x27;: {&#x27;schema&#x27;: {&#x27;$ref&#x27;: &#x27;#/components/schemas/GreetingJim&#x27;}}},
+                                                                  &#x27;description&#x27;: &#x27;Successful &#x27;
+                                                                                 &#x27;response&#x27;},
+                                                          &#x27;401&#x27;: {&#x27;description&#x27;: &#x27;Unauthorized&#x27;,
+                                                                  &#x27;headers&#x27;: {&#x27;WWW-Authenticate&#x27;: {&#x27;description&#x27;: &#x27;Basic &#x27;
+                                                                                                                  &#x27;authentication &#x27;
+                                                                                                                  &#x27;challenge&#x27;,
+                                                                                                   &#x27;schema&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;}}}},
+                                                          &#x27;403&#x27;: {&#x27;description&#x27;: &#x27;Not &#x27;
+                                                                                 &#x27;Authorized&#x27;}},
+                                            &#x27;security&#x27;: [{&#x27;basicAuth&#x27;: []}],
+                                            &#x27;summary&#x27;: &#x27;Retrieve a &#x27;
+                                                       &#x27;Personalize &#x27;
+                                                       &#x27;Greeting response &#x27;
+                                                       &#x27;based on the &#x27;
+                                                       &#x27;specified name.  &#x27;
+                                                       &#x27;The endpoint is &#x27;
+                                                       &#x27;an.example of a &#x27;
+                                                       &#x27;protected endpoint &#x27;
+                                                       &#x27;using Basic &#x27;
+                                                       &#x27;Authentication.&#x27;,
+                                            &#x27;tags&#x27;: []},
+                                    &#x27;parameters&#x27;: [],
+                                    &#x27;summary&#x27;: &#x27;An authorized user may use &#x27;
+                                               &#x27;this endpoint to retrieve &#x27;
+                                               &#x27;a JSON greeting to the a &#x27;
+                                               &#x27;personalized name.  The &#x27;
+                                               &#x27;endpoint is protected with &#x27;
+                                               &#x27;Basic Authentication.  You &#x27;
+                                               &#x27;can register a new user &#x27;
+                                               &#x27;account at &#x27;
+                                               &#x27;https://security.i7es.click/register.  &#x27;
+                                               &#x27;Everyone is free to sign &#x27;
+                                               &#x27;up.  The code is available &#x27;
+                                               &#x27;on GitHub at  &#x27;
+                                               &#x27;https://github.com/leedahl/OGC_LandingPage &#x27;
+                                               &#x27;with an Open Source MIT &#x27;
+                                               &#x27;license.&#x27;}},
+     &#x27;servers&#x27;: [{&#x27;description&#x27;: &#x27;Production server where the &#x27;
+                                 &#x27;documentation and API reside.&#x27;,
+                  &#x27;url&#x27;: &#x27;https://greeting.i7es.click&#x27;,
+                  &#x27;variables&#x27;: {}}]}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +1707,7 @@
                 if (/^#(bblock|item)-/.test(location.hash)) {
                     const highlight = document.querySelector(location.hash.replaceAll('.', '\\.'));
                     if (highlight) {
-                        highlight.closest('.accordion-collapse').classList.add('show');
+                        highlight.querySelector('.accordion-collapse').classList.add('show');
                         highlight.classList.add('highlighted');
                     }
                 }

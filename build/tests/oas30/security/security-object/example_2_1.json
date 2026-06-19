@@ -1,0 +1,461 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getHomePage",
+        "summary": "API Home Page",
+        "description": "Returns the API home page with documentation links",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/.well-known/{well_known_name}": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getWellKnownResource",
+        "summary": "Well-Known Resource",
+        "description": "Returns a specific well-known resource",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "well_known_name",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Name of the well-known resource",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/api": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getApiInfo",
+        "summary": "API Information",
+        "description": "Returns information about the API",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/conformance": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getConformance",
+        "summary": "API Conformance",
+        "description": "Returns information about API conformance",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/conformance/{conformance_alias}": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getConformanceAlias",
+        "summary": "API Conformance Alias",
+        "description": "Returns information about a specific API conformance alias",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "conformance_alias",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Conformance alias name",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/documentation": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getDocumentation",
+        "summary": "API Documentation",
+        "description": "Returns API documentation",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/index.html": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getIndexPage",
+        "summary": "API Home Page (index.html)",
+        "description": "Returns the API home page with documentation links",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/register": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getRegistrationForm",
+        "summary": "Registration Form",
+        "description": "Returns a registration form for new users",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      },
+      "post": {
+        "operationId": "registerUser",
+        "summary": "Register User",
+        "description": "Registers a new user",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegistration"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegistration"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "User successfully registered",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/user-management": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getUserManagementForm",
+        "summary": "User Management Form",
+        "description": "Returns a form for user management (password change)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Basic authentication challenge"
+              }
+            }
+          },
+          "200": {
+            "description": "User management form",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "deprecated": false
+      },
+      "post": {
+        "operationId": "updateUser",
+        "summary": "Update User",
+        "description": "Updates user information (currently only password changes)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "password": {
+                    "type": "string",
+                    "format": "password",
+                    "description": "User's new password"
+                  },
+                  "username": {
+                    "type": "string",
+                    "description": "User's username"
+                  },
+                  "confirm_password": {
+                    "type": "string",
+                    "format": "password",
+                    "description": "Confirmation of new password"
+                  }
+                },
+                "required": [
+                  "username",
+                  "password",
+                  "confirm_password"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "404": {
+            "description": "User not found",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Basic authentication challenge"
+              }
+            }
+          },
+          "200": {
+            "description": "User information successfully updated",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "parameters": {},
+    "responses": {},
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "description": "Basic authentication with username and password",
+        "scheme": "basic"
+      }
+    }
+  },
+  "info": {
+    "title": "My API Security Service",
+    "description": "Security services for APIs, including user registration and management.",
+    "version": "1.0.0",
+    "termsOfService": "",
+    "contact": {
+      "name": "Development Support",
+      "email": "support@leedahl.com",
+      "url": "https://github.com/leedahl"
+    },
+    "license": {}
+  },
+  "externalDocs": {},
+  "servers": [
+    {
+      "url": "https://security.i7es.click",
+      "description": "Production server",
+      "variables": {}
+    }
+  ]
+}

@@ -3,8 +3,8 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix modspec: <http://www.opengis.net/def/ont/modspec/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix ns1: <http://www.w3.org/ns/oa#> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -22,16 +22,19 @@
     rdfs:label "Security Object Schema" ;
     dct:abstract "Schema for OpenAPI 3.0 security objects in OGC APIs"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-03-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-oas30-security/bblock/ogc.oas30.security.security-object> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-oas30-security/build/generateddocs/json-full/oas30/security/security-object/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-oas30-security/build/generateddocs/markdown/oas30/security/security-object/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-oas30-security/build/generateddocs/markdown/oas30/security/security-object/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-oas30-security/bblock/ogc.oas30.security.security-object> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-03-05"^^xsd:date ;
-    dct:source <https://swagger.io/specification/v3/#security-requirement-object>,
-        <https://swagger.io/specification/v3/#security-scheme-object> ;
+    dct:modified "2026-06-19"^^xsd:date ;
+    dct:source <https://greeting.i7es.click/api>,
+        <https://portfolio.i7es.click/api>,
+        <https://security.i7es.click/api>,
+        <https://spec.openapis.org/oas/v3.0.4.html#security-requirement-object>,
+        <https://spec.openapis.org/oas/v3.0.4.html#security-scheme-object-0> ;
     modspec:class <http://www.opengis.net/spec/api-security/1.0/conf/OAS30security> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-oas30-security/> ;
     skos:prefLabel "Security Object Schema" ;
@@ -40,75 +43,81 @@
         "oas30",
         "security" ;
     prof:hasResource [ rdfs:label "Implementation example" ;
-            ns1:relation <http://www.iana.org/assignments/relation/example> ;
-            ns2:hasTarget <https://greeting.i7es.click/api> ],
+            ns2:relation <http://www.iana.org/assignments/relation/example> ;
+            ns1:hasTarget <https://security.i7es.click/api> ],
         [ rdfs:label "Implementation example" ;
-            ns1:relation <http://www.iana.org/assignments/relation/example> ;
-            ns2:hasTarget <https://portfolio.i7es.click/api> ],
+            ns2:relation <http://www.iana.org/assignments/relation/example> ;
+            ns1:hasTarget <https://greeting.i7es.click/api> ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-oas30-security/build/annotated/oas30/security/security-object/schema.json> ;
             prof:hasRole role:schema ],
         [ rdfs:label "Implementation example" ;
-            ns1:relation <http://www.iana.org/assignments/relation/example> ;
-            ns2:hasTarget <https://security.i7es.click/api> ],
+            ns2:relation <http://www.iana.org/assignments/relation/example> ;
+            ns1:hasTarget <https://portfolio.i7es.click/api> ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-oas30-security/build/annotated/oas30/security/security-object/schema.yaml> ;
             prof:hasRole role:schema ] ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
+    bblocks:validationPassed false .
 
 <https://ogcincubator.github.io/bblocks-oas30-security/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N9e859fccba084bee95e1109f47532d86 ;
+    prov:wasAttributedTo _:Nf0e878907db14b549dcb9b062e30ad17 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-03-05T10:04:16.222860"^^xsd:dateTime ;
-            prov:startedAtTime "2026-03-05T10:04:16.099340"^^xsd:dateTime ;
+            prov:endedAtTime "2026-06-19T08:49:56.386295"^^xsd:dateTime ;
+            prov:startedAtTime "2026-06-19T08:49:55.815421"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:f07d17540e65b0c963bb3f2a768c59eabd4a161f" ;
-                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-oas30-security/build/register.json> ] ;
-            prov:wasAssociatedWith _:N9e859fccba084bee95e1109f47532d86 ] .
+                    dct:hasVersion "git:944a5f86c7878e534a3f707a01e9d9f7441916ca" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-oas30-security/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:Nf0e878907db14b549dcb9b062e30ad17 ] .
 
-<https://swagger.io/specification/v3/#security-requirement-object> rdfs:label "OpenAPI 3.0 Security Requirement Object" .
+<https://spec.openapis.org/oas/v3.0.4.html#security-requirement-object> rdfs:label "OpenAPI 3.0 Security Requirement Object" .
 
-<https://swagger.io/specification/v3/#security-scheme-object> rdfs:label "OpenAPI 3.0 Security Scheme Object" .
+<https://spec.openapis.org/oas/v3.0.4.html#security-scheme-object-0> rdfs:label "OpenAPI 3.0 Security Scheme Object" .
+
+<https://greeting.i7es.click/api> rdfs:label "Implementation example 3" .
+
+<https://portfolio.i7es.click/api> rdfs:label "Implementation example 1" .
+
+<https://security.i7es.click/api> rdfs:label "Implementation example 2" .
 
 <https://ogcincubator.github.io/bblocks-oas30-security/> a skos:ConceptScheme,
         dcat:Catalog,
         bblocks:BBlocksRegister ;
     rdfs:label "Building Blocks - OpenAPI 3.0 Security" ;
     dct:abstract """Standard schemas for defining
-[OpenAPI 3.0 security requirements](https://swagger.io/specification/v3/#security-requirement-object) in OGC APIs. 
+[OpenAPI 3.0 security requirements](https://spec.openapis.org/oas/v3.0.4.html#security-scheme-object-0) in OGC APIs. 
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-03-05T10:04:15.914656"^^xsd:dateTime ;
+    dct:modified "2026-06-19T08:49:47.677916"^^xsd:dateTime ;
     void:sparqlEndpoint <https://defs-dev.opengis.net/fuseki/query> ;
     owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://ogc.oas30.security.security-object> ;
     skos:prefLabel "Building Blocks - OpenAPI 3.0 Security" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
-            dct:type "application/ld+json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://ogcincubator.github.io/bblocks-oas30-security/build/bblocks.jsonld> ],
-        [ rdfs:label "This Building Blocks Register in JSON format" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
             dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://ogcincubator.github.io/bblocks-oas30-security/build/register.json> ],
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://ogcincubator.github.io/bblocks-oas30-security/build/register.json> ],
         [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://ogcincubator.github.io/bblocks-oas30-security/build/bblocks.ttl> ] ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://ogcincubator.github.io/bblocks-oas30-security/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://ogcincubator.github.io/bblocks-oas30-security/build/bblocks.jsonld> ] ;
     foaf:homepage <https://ogcincubator.github.io/bblocks-oas30-security/> ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-oas30-security/build/tests/report.html> .
 
-_:N9e859fccba084bee95e1109f47532d86 a prov:Agent,
+_:Nf0e878907db14b549dcb9b062e30ad17 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.18" ;
+    dct:hasVersion "0.5.31" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

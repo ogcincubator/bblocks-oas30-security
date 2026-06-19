@@ -1,0 +1,711 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getLandingPage",
+        "summary": "API Landing Page",
+        "description": "Returns the landing page for the API portfolio",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/.well-known": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getWellKnown",
+        "summary": "Well-Known Endpoint",
+        "description": "Returns information about well-known endpoints",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/.well-known/{well_known_name}": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getSpecificWellKnown",
+        "summary": "Specific Well-Known Endpoint",
+        "description": "Returns information about a specific well-known endpoint",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "well_known_name",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Name of the well-known endpoint",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "requestBody": {},
+        "responses": {
+          "404": {
+            "description": "Well-known endpoint not found",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/api": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getApiInfo",
+        "summary": "API Information",
+        "description": "Returns information about available APIs",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/api/openapi": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "post": {
+        "operationId": "uploadOpenApiDocument",
+        "summary": "Upload OpenAPI Document",
+        "description": "Uploads an OpenAPI document to the system",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "OpenAPI 3.0 document"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "OpenAPI document successfully processed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "api_id": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Basic authentication challenge"
+              }
+            },
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/openapi/{api_id}": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "post": {
+        "operationId": "updateOpenApiDocument",
+        "summary": "Update OpenAPI Document",
+        "description": "Updates an existing OpenAPI document",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "api_id",
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID of the API to update",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "description": "OpenAPI 3.0 document"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "OpenAPI document successfully updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "api_id": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "object"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "headers": {
+              "WWW-Authenticate": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "Basic authentication challenge"
+              }
+            },
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth": []
+          }
+        ],
+        "deprecated": false
+      }
+    },
+    "/conformance": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getConformance",
+        "summary": "Conformance Information",
+        "description": "Returns conformance information for the APIs",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/conformance/{conformance_alias}": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getSpecificConformance",
+        "summary": "Specific Conformance Information",
+        "description": "Returns conformance information for a specific API",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "conformance_alias",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Alias of the conformance information",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "requestBody": {},
+        "responses": {
+          "404": {
+            "description": "Conformance alias not found",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/documentation": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getDocumentation",
+        "summary": "API Documentation",
+        "description": "Returns documentation for the APIs",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/index.html": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getLandingPageHtml",
+        "summary": "API Landing Page (HTML)",
+        "description": "Returns the landing page for the API portfolio in HTML format",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/register": {
+      "summary": "",
+      "description": "",
+      "parameters": [],
+      "get": {
+        "operationId": "getRegistrationForm",
+        "summary": "Registration Form",
+        "description": "Returns a registration form for new users",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {},
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      },
+      "post": {
+        "operationId": "registerUser",
+        "summary": "Register User",
+        "description": "Registers a new user",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegistration"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRegistration"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "User successfully registered",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "deprecated": false
+      }
+    },
+    "/user-management": {
+      "summary": "",
+      "description": "",
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "status"
+        ],
+        "properties": {
+          "detail": {
+            "type": "string",
+            "description": "A human-readable explanation specific to this occurrence of the problem"
+          },
+          "type": {
+            "type": "string",
+            "format": "uri",
+            "description": "A URI reference that identifies the problem type"
+          },
+          "title": {
+            "type": "string",
+            "description": "A short, human-readable summary of the problem type"
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code"
+          }
+        }
+      },
+      "UserManagementOperation": {
+        "type": "object",
+        "required": [
+          "operation"
+        ],
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "description": "The full name of the user (for create/update operations)"
+          },
+          "api_id": {
+            "type": "string",
+            "description": "The API ID for grant/revoke operations"
+          },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "description": "The password for the user (for create/update operations)"
+          },
+          "operation": {
+            "type": "string",
+            "description": "The operation to perform",
+            "enum": [
+              "create",
+              "update",
+              "delete",
+              "grant",
+              "revoke"
+            ]
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address for the user (for create/update operations)"
+          },
+          "username": {
+            "type": "string",
+            "description": "The username of the target user"
+          }
+        }
+      },
+      "UserRegistration": {
+        "type": "object",
+        "required": [
+          "username",
+          "password",
+          "email"
+        ],
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "description": "The full name of the user"
+          },
+          "password": {
+            "type": "string",
+            "format": "password",
+            "description": "The password for the new user"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address for the new user"
+          },
+          "username": {
+            "type": "string",
+            "description": "The username for the new user"
+          }
+        }
+      }
+    },
+    "parameters": {},
+    "responses": {},
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "description": "Basic authentication using username and password",
+        "scheme": "basic"
+      }
+    }
+  },
+  "info": {
+    "title": "My APIs",
+    "description": "Landing Page for My APIs.",
+    "version": "1.0.0",
+    "termsOfService": "",
+    "contact": {
+      "name": "Michael",
+      "url": "https://i7es.click"
+    },
+    "license": {}
+  },
+  "externalDocs": {},
+  "servers": [
+    {
+      "url": "https://portfolio.i7es.click",
+      "description": "Production server",
+      "variables": {}
+    }
+  ]
+}
